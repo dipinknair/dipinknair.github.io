@@ -1,7 +1,7 @@
 # Portfolio Website.
 Welcom to my web portfolio. Clich [here](https://dipinknair.github.io)
 
-Get this template from @vinaysomawat [here](https://github.com/vinaysomawat/vinaysomawat.github.io)
+Inspired from @vinaysomawat [here](https://github.com/vinaysomawat/vinaysomawat.github.io)
 
 To setup the project on your local machine:
 
