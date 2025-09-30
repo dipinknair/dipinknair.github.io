@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dipin Nair - Software Engineer</title>
+    <meta name="description" content="Software Engineer Portfolio - Terminal Theme">
+    <!-- To hide/show sections: Edit SECTION_CONFIG in assets/js/script.js -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="terminal-window">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="btn red"></span>
+                <span class="btn yellow"></span>
+                <span class="btn green"></span>
+            </div>
+            <div class="terminal-title">dipin@portfolio</div>
+            <div class="theme-toggle-header">
+                <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme (Ctrl+T)">
+                    <div id="themeIcon" class="theme-icon theme-icon-dark">
+                        <div class="theme-switcher-icon">
+                            <div class="icon-half dark-half"></div>
+                            <div class="icon-half light-half"></div>
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </div>
+        
+        <div class="terminal-content">
+            <!-- Interactive Terminal -->
+            <div class="terminal-prompt-line">
+                <span class="prompt">terminal@dipin:~$</span>
+                <input type="text" class="terminal-input" placeholder="Type 'help' for available commands..." autofocus>
+                <span class="cursor">_</span>
+            </div>
+            <div class="terminal-output" id="terminalOutput"></div>
+            
+            <!-- Navigation Menu -->
+            <nav class="terminal-nav">
+                <div class="nav-line">
+                    <span class="prompt">navigation@dipin:~$</span>
+                    <span class="nav-commands">
+                        <a href="#about" class="nav-cmd">./about</a> |
+                        <a href="#experience" class="nav-cmd">./experience</a> |
+                        <a href="#education" class="nav-cmd">./education</a> |
+                        <a href="#projects" class="nav-cmd">./projects</a> |
+                        <a href="#blog" class="nav-cmd">./blog</a> |
+                        <a href="#resume" class="nav-cmd">./resume</a> |
+                        <a href="#contact" class="nav-cmd">./contact</a>
+                    </span>
+                </div>
+            </nav>
+
+            <!-- About Section -->
+            <section id="about" class="terminal-section">
+                <div class="section-header">
+                    <span class="prompt">about@dipin:~$</span>
+                    <span class="command">cat about.txt</span>
+                </div>
+                <div class="section-content">
+                    <pre class="ascii-art">
+
+                                    _/      _/  _/      _/  _/          _/    _/_/    
+                                     _/  _/    _/_/    _/  _/          _/  _/    _/   
+                                      _/      _/  _/  _/  _/    _/    _/  _/_/_/_/    
+                                     _/      _/    _/_/    _/  _/  _/    _/    _/     
+                                    _/      _/      _/      _/  _/      _/    _/      
+                                                  
+                                                                              
+                    </pre>
+                    <p class="about-text">
+                        Hello! I'm a Software Developer with 6+ years of experience in Python and C++ specializing in simulation software and automation. 
+                        Currently working as R&D Engineer II at Ansys, I'm a core contributor to Ansys Mechanical software development and PyMechanical maintainer. 
+                        I have a strong mathematical background with expertise in robotics, AI, and DevOps workflows. Welcome to my digital workspace!
+                    </p>
+                    <div class="skills-list">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">PyAnsys</span>
+                        <span class="skill-tag">DevOps</span>
+                        <span class="skill-tag">Azure</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience" class="terminal-section">
+                <div class="section-header">
+                    <span class="prompt">experience@dipin:~$</span>
+                    <span class="command">ls -la work_history/</span>
+                </div>
+                <div class="section-content">
+                    <div class="experience-item">
+                        <div class="exp-header">
+                            <span class="file-permissions">-rw-r--r--</span>
+                            <span class="file-date">2023-present</span>
+                            <span class="file-name">ansys_rd_engineer.txt</span>
+                        </div>
+                        <div class="exp-details">
+                            <div class="company-title">
+                                <span class="company-name">Ansys Inc.</span>
+                                <span class="job-title">R&D Engineer II</span>
+                            </div>
+                            <div class="achievements">
+                                • Developed PyAnsys Open Source Libraries and supported production of Ansys Mechanical
+                                • Conducted Scrum meetings for PyMechanical Python package
+                                • Interacted with customers and assisted them in integrating PyAnsys packages to their workflow
+                                • Worked with Linear Dynamics team for adding new release features for ANSYS Mechanical Software
+                                • Made major contributions through Windows and Linux developer builds via Microsoft Azure
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="exp-header">
+                            <span class="file-permissions">-rw-r--r--</span>
+                            <span class="file-date">2016-2020</span>
+                            <span class="file-name">gm_senior_engineer.txt</span>
+                        </div>
+                        <div class="exp-details">
+                            <div class="company-title">
+                                <span class="company-name">General Motors</span>
+                                <span class="job-title">Senior Engineer</span>
+                            </div>
+                            <div class="achievements">
+                                • Earned Design for Six Sigma Black Belt by supervising 2 projects as team leader
+                                • Coordinated on adding 12 different efficiency modules in MASTA leveraging C++
+                                • Led cross-functional team of 4 to automate meshing in SimLab software using JavaScript
+                                • Automated Abaqus system modeling with VBA scripting and reduced 85% of man hours
+                                • Earned 7 recognitions including Work of Wonder for Transmission efficiency Optimization
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education" class="terminal-section">
+                <div class="section-header">
+                    <span class="prompt">education@dipin:~$</span>
+                    <span class="command">cat academic_records.txt</span>
+                </div>
+                <div class="section-content">
+                    <div class="education-item">
+                        <div class="edu-header">
+                            <span class="file-permissions">-rw-r--r--</span>
+                            <span class="file-date">2021-2023</span>
+                            <span class="file-name">masters_mechanical_engineering.txt</span>
+                        </div>
+                        <div class="edu-details">
+                            <div class="degree-info">
+                                <span class="university-name">University of Cincinnati</span>
+                                <span class="degree-title">Master of Science in Mechanical Engineering</span>
+                            </div>
+                            <div class="academic-details">
+                                <span class="gpa">GPA: 4.0/4.0</span>
+                                <div class="coursework">
+                                    • Specialization: Engineering Simulation and Automation
+                                    • Focus: Robotics, AI, and Advanced Manufacturing Systems
+                                    • Research: Classification of Rice using Soft Computing AI Techniques
+                                    • Achievement: Perfect GPA with focus on mathematical modeling
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="edu-header">
+                            <span class="file-permissions">-rw-r--r--</span>
+                            <span class="file-date">2012-2016</span>
+                            <span class="file-name">bachelors_mechanical_engineering.txt</span>
+                        </div>
+                        <div class="edu-details">
+                            <div class="degree-info">
+                                <span class="university-name">Indian Institute of Technology, Hyderabad</span>
+                                <span class="degree-title">Bachelor of Technology in Mechanical Engineering</span>
+                            </div>
+                            <div class="academic-details">
+                                <span class="gpa">GPA: 8.24/10</span>
+                                <div class="coursework">
+                                    • Strong foundation in Engineering Mathematics and Physics
+                                    • Core Coursework: Thermodynamics, Fluid Mechanics, Manufacturing Systems
+                                    • Technical Skills: CAD/CAE software, Programming fundamentals
+                                    • Leadership: Participation in technical societies and project teams
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+                        <!-- Projects Section -->
+            <section id="projects" class="terminal-section">
+                <div class="section-header">
+                    <span class="prompt">projects@dipin:~$</span>
+                    <span class="command">find ./projects -name "*.md" | head -3</span>
+                </div>
+                <div class="section-content">
+                    <div class="project-item">
+                        <a href="projects/" class="project-link">
+                            <span class="file-icon">📁</span>
+                            <span class="project-name">./projects/</span>
+                        </a>
+                        <p class="project-desc">Browse all my projects and open-source contributions</p>
+                    </div>
+                    
+                    <div class="project-preview">
+                        <a href="projects/" class="project-card-link">
+                            <div class="project-card">
+                                <h4>Project Alpha</h4>
+                                <p>Full-stack web application with React and Node.js</p>
+                                <div class="project-tags">
+                                    <span class="tag">React</span>
+                                    <span class="tag">Node.js</span>
+                                    <span class="tag">MongoDB</span>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="projects/" class="project-card-link">
+                            <div class="project-card">
+                                <h4>Project Beta</h4>
+                                <p>Machine learning model for data analysis</p>
+                                <div class="project-tags">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">TensorFlow</span>
+                                    <span class="tag">Docker</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="view-all-projects">
+                        <a href="projects/" class="view-all-btn">
+                            <span class="prompt">projects@dipin:~$</span>
+                            <span class="command">ls -la ./projects/</span>
+                            <span class="output">→ View all projects</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Blog Section -->
+            <section id="blog" class="terminal-section">
+                <div class="section-header">
+                    <span class="prompt">blog@dipin:~$</span>
+                    <span class="command">ls -t blog/ | head -5</span>
+                </div>
+                <div class="section-content">
+                    <div class="blog-item">
+                        <a href="blog/" class="blog-link">
+                            <span class="file-icon">📝</span>
+                            <span class="blog-name">./blog/</span>
+                        </a>
+                        <p class="blog-desc">Latest thoughts on technology, programming, and software engineering</p>
+                    </div>
+                    
+                    <div class="blog-preview">
+                        <a href="blog/posts/scalable-web-applications.html" class="blog-post-link">
+                            <div class="blog-post">
+                                <span class="post-date">[2025-09-25]</span>
+                                <span class="post-title">Building Scalable Web Applications</span>
+                            </div>
+                        </a>
+                        <a href="blog/" class="blog-post-link">
+                            <div class="blog-post">
+                                <span class="post-date">[2025-09-20]</span>
+                                <span class="post-title">My Journey with React Hooks</span>
+                            </div>
+                        </a>
+                        <a href="blog/" class="blog-post-link">
+                            <div class="blog-post">
+                                <span class="post-date">[2025-09-15]</span>
+                                <span class="post-title">Docker Best Practices</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resume Section -->
+            <section id="resume" class="terminal-section">
+                <div class="section-header">
+                    <span class="prompt">resume@dipin:~$</span>
+                    <span class="command">cat resume.pdf | head</span>
+                </div>
+                <div class="section-content">
+                    <div class="resume-download">
+                        <a href="assets/documents/resume.pdf" class="download-btn" id="downloadResume" download="Dipin_Nair_Resume.pdf">
+                            <i class="fas fa-download"></i>
+                            Download Resume (PDF)
+                        </a>
+                        <span class="file-info">resume_dipin_nair.pdf (247KB)</span>
+                    </div>
+                    <div class="resume-preview">
+                        <p>Preview available after download. Contains:</p>
+                        <ul>
+                            <li>• Complete work history and achievements</li>
+                            <li>• Technical skills and certifications</li>
+                            <li>• Education and professional development</li>
+                            <li>• Contact information and references</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="terminal-section">
+                <div class="section-header">
+                    <span class="prompt">contact@dipin:~$</span>
+                    <span class="command">./connect.sh</span>
+                </div>
+                <div class="section-content">
+                    <div class="contact-info">
+                        <p>Let's connect and build something amazing together!</p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-item">
+                                <span class="contact-label">Email:</span>
+                                <a href="mailto:dipinknair619@gmail.com" class="contact-link">
+                                    dipinknair619@gmail.com
+                                </a>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <span class="contact-label">Phone:</span>
+                                <a href="tel:+15136200022" class="contact-link">
+                                    +1 (513) 620-0022
+                                </a>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <span class="contact-label">Location:</span>
+                                <span class="contact-text">Austin, TX</span>
+                            </div>
+                            
+                            <div class="social-links">
+                                <a href="https://github.com/dipinknair" target="_blank" class="social-link" id="githubLink" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+                                
+                                <a href="https://linkedin.com/in/dipinknair619" target="_blank" class="social-link" id="linkedinLink" rel="noopener noreferrer">
+                                    <i class="fab fa-linkedin"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
