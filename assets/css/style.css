@@ -1042,6 +1042,12 @@ html {
     margin-left: 20px;
 }
 
+.output-line.delete {
+    color: var(--accent-red);
+    margin-left: 20px;
+    opacity: 0.85;
+}
+
 .command-history {
     color: var(--text-muted);
     font-style: italic;

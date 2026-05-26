@@ -725,8 +725,69 @@ drwxr-xr-x  contact/`
             echo: {
                 description: 'Display text',
                 action: (args) => args.join(' ') || ''
+            },
+
+            rm: {
+                description: 'Remove files',
+                action: (args) => {
+                    if (isRmRfSlash(args)) {
+                        runRmRfEasterEgg();
+                        return null;
+                    }
+                    return 'rm: refusing unsafe operation.';
+                }
             }
         };
+
+        function isRmRfSlash(args) {
+            const joined = args.join(' ').trim();
+            return /^-rf\s*\/?$/.test(joined);
+        }
+
+        function runRmRfEasterEgg() {
+            terminalInput.disabled = true;
+
+            addToOutput('rm: removing filesystem...', 'error');
+
+            const fakePaths = [
+                '/index.html',
+                '/assets/css/style.css',
+                '/assets/js/script.js',
+                '/assets/documents/resume.pdf',
+                '/projects/index.html',
+                '/blog/index.html',
+                '/about.txt',
+                '/experience/synopsys.txt',
+                '/home/dipin/.ssh/id_rsa',
+                '/etc/passwd',
+                '/usr/bin/python3',
+                '/var/log/system.log',
+                '/node_modules/react/index.js',
+                '/.git/config',
+                '/portfolio/secrets.env',
+                '/README.md',
+                '/LICENSE'
+            ];
+
+            let count = 0;
+            const maxLines = 28;
+
+            const flicker = setInterval(() => {
+                const path = fakePaths[Math.floor(Math.random() * fakePaths.length)];
+                addToOutput(`rm: deleting ${path}`, 'delete');
+                terminalOutput.scrollTop = terminalOutput.scrollHeight;
+                count++;
+
+                if (count >= maxLines) {
+                    clearInterval(flicker);
+                    setTimeout(() => {
+                        addToOutput('just kidding. nice try.', 'success');
+                        terminalOutput.scrollTop = terminalOutput.scrollHeight;
+                        setTimeout(() => window.location.reload(), 1400);
+                    }, 350);
+                }
+            }, 70);
+        }
         
         // Handle command input
         terminalInput.addEventListener('keydown', function(e) {
@@ -772,11 +833,12 @@ drwxr-xr-x  contact/`
         });
         
         function executeCommand(input) {
-            const [commandName, ...args] = input.split(' ');
+            const trimmed = input.trim();
+            const [commandName, ...args] = trimmed.split(/\s+/);
             const command = commands[commandName.toLowerCase()];
             
             // Show the command in terminal
-            addToOutput(`terminal@dipin:~$ ${input}`, 'command');
+            addToOutput(`terminal@dipin:~$ ${trimmed}`, 'command');
             
             if (command) {
                 const result = command.action(args);
