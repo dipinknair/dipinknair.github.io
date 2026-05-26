@@ -323,6 +323,28 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
+
+    function clearTerminalAndScrollTop() {
+        const terminalOutput = document.getElementById('terminalOutput');
+
+        if (terminalOutput) {
+            terminalOutput.innerHTML = '';
+            terminalOutput.classList.remove('visible');
+        }
+
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+    function setupClearSiteButton() {
+        const clearSiteBtn = document.getElementById('clearSite');
+
+        if (clearSiteBtn) {
+            clearSiteBtn.addEventListener('click', clearTerminalAndScrollTop);
+        }
+    }
     
     // Matrix-style background effect (subtle)
     function createMatrixEffect() {
@@ -463,6 +485,7 @@ Terminal Portfolio Help:
     setupSocialLinks();
     setupSkillsTags();
     setupResumeDownload();
+    setupClearSiteButton();
     setupKeyboardShortcuts();
     
     // Optional: Add subtle matrix effect (uncomment if desired)
@@ -666,10 +689,9 @@ Indian Institute of Technology, Hyderabad - Hyderabad, India
             },
             
             clear: {
-                description: 'Clear terminal output',
+                description: 'Clear terminal output and return to top',
                 action: () => {
-                    terminalOutput.innerHTML = '';
-                    terminalOutput.classList.remove('visible');
+                    clearTerminalAndScrollTop();
                     return '';
                 }
             },

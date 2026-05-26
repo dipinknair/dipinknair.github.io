@@ -857,6 +857,30 @@ body {
     border-top: 1px solid var(--border-color);
     display: flex;
     align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.clear-site-btn {
+    background: transparent;
+    border: none;
+    color: var(--accent-blue);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 4px 8px;
+    transition: all 0.2s ease;
+}
+
+.clear-site-btn:hover {
+    color: var(--accent-green);
+    transform: translateY(-1px);
+}
+
+.footer-hint {
+    color: var(--text-muted);
+    font-size: 0.9rem;
 }
 
 /* Responsive Design */
