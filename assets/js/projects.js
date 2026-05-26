@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize projects data
     let projectsData = Array.from(projectCards).map((card, index) => ({
         element: card,
-        name: card.querySelector('h3 a').textContent,
+        name: card.querySelector('h3 a')?.textContent || card.querySelector('h3')?.textContent || '',
         tech: card.dataset.tech || '',
         date: new Date(2025, 8 - index, 25), // Mock dates
         stars: parseInt(card.querySelector('.stat').textContent.split(' ')[1]) || 0
@@ -202,6 +202,8 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
         
         const filtersSection = document.querySelector('.project-filters');
+        if (!filtersSection) return;
+
         filtersSection.appendChild(searchContainer);
         
         const searchInput = searchContainer.querySelector('.search-input');
@@ -213,8 +215,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function searchProjects(searchTerm) {
         projectCards.forEach(card => {
-            const title = card.querySelector('h3 a').textContent.toLowerCase();
-            const description = card.querySelector('.project-description p').textContent.toLowerCase();
+            const title = card.querySelector('h3 a')?.textContent.toLowerCase() || card.querySelector('h3')?.textContent.toLowerCase() || '';
+            const description = card.querySelector('.project-description p')?.textContent.toLowerCase() || '';
             const tech = card.dataset.tech.toLowerCase();
             
             const matchesSearch = !searchTerm || 
@@ -256,8 +258,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Update project statistics
     function updateProjectStats() {
         const visibleCards = document.querySelectorAll('.project-card:not(.hidden)');
-        const visibleFeatured = document.querySelectorAll('.featured-project:not(.hidden)');
-        const totalVisible = visibleCards.length + visibleFeatured.length;
+        const totalVisible = visibleCards.length;
         
         // Update active projects count
         const activeProjectsStat = document.querySelector('.projects-stats .stat strong');

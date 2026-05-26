@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function updatePostCount() {
-        const visiblePosts = document.querySelectorAll('.blog-post:not(.hidden)');
+        const visiblePosts = document.querySelectorAll('.blog-post:not(.hidden):not([data-category="placeholder"])');
         const countElement = document.getElementById('postCount');
         if (countElement) {
             countElement.textContent = visiblePosts.length;
@@ -206,6 +206,8 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
         
         const filtersSection = document.querySelector('.blog-filters');
+        if (!filtersSection) return;
+
         filtersSection.parentNode.insertBefore(searchContainer, filtersSection);
         
         const searchInput = searchContainer.querySelector('.search-input');
@@ -217,8 +219,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function searchPosts(searchTerm) {
         blogPosts.forEach(post => {
-            const title = post.querySelector('h3 a').textContent.toLowerCase();
-            const excerpt = post.querySelector('.post-excerpt').textContent.toLowerCase();
+            const title = post.querySelector('h3 a')?.textContent.toLowerCase() || '';
+            const excerpt = post.querySelector('.post-excerpt')?.textContent.toLowerCase() || '';
             const tags = Array.from(post.querySelectorAll('.tag')).map(tag => 
                 tag.textContent.toLowerCase()
             ).join(' ');

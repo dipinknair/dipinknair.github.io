@@ -3,8 +3,8 @@
 // ===== SECTION VISIBILITY CONFIGURATION =====
 // Set to false to hide sections, true to show them
 const SECTION_CONFIG = {
-    projects: false,    // Show/hide projects section
-    blog: false        // Show/hide blog section
+    projects: true,     // Show/hide projects section
+    blog: true          // Show/hide blog section
 };
 // ============================================
 
@@ -42,6 +42,20 @@ function loadTheme() {
             themeIcon.className = 'theme-icon theme-icon-dark';
         }
     }
+}
+
+function getRelativePageUrl(targetPath) {
+    const path = window.location.pathname;
+
+    if (path.includes('/projects/posts/') || path.includes('/blog/posts/')) {
+        return `../../${targetPath}`;
+    }
+
+    if (path.includes('/projects/') || path.includes('/blog/')) {
+        return `../${targetPath}`;
+    }
+
+    return targetPath;
 }
 
 // Keyboard shortcut for theme toggle
@@ -154,10 +168,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Start the typing animation
-    setTimeout(() => {
-        typeText(typingText, './run_portfolio.sh');
-    }, 1000);
+    // Start the homepage typing/loading animation only when the homepage
+    // loading element exists. Subpages provide their own typing effects.
+    if (typingText && loadingText) {
+        setTimeout(() => {
+            typeText(typingText, './run_portfolio.sh');
+        }, 1000);
+    }
     
     // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll('.nav-cmd');
@@ -537,22 +554,16 @@ Focused on scalable Python platforms, open-source tooling, and reliable customer
             
             projects: {
                 description: 'Show recent projects',
-                action: () => `Recent Projects:
-• PyMechanical - PyAnsys open-source Python library for programmatic access to Ansys Mechanical
-• Docker and Azure DevOps Pipelines - Containerized release workflows across Windows and Linux
-• Automated Regression Frameworks - Unit and integration test coverage for production simulation software
-• Robotics Batch Testing - Python/PyQt tooling, QR-code vision, and Siemens server workflows
-• MASTA Efficiency Modules - C++ modules for transmission optimization
-Type 'open projects' to view detailed project information.`
+                action: () => `Projects:
+• Coming soon
+Type 'open projects' to view the placeholder page.`
             },
             
             blog: {
                 description: 'Show recent blog posts',
                 action: () => `Recent Blog Posts:
-• Building Scalable Web Applications - Architecture patterns and best practices
-• My Journey with React Hooks - From class components to hooks
-• Docker Best Practices - Production deployment strategies
-Type 'open blog' to view all posts.`
+• Coming soon
+Type 'open blog' to view the placeholder page.`
             },
             
             contact: {
@@ -624,10 +635,10 @@ Indian Institute of Technology, Hyderabad - Hyderabad, India
                     const section = args[0]?.toLowerCase();
                     switch (section) {
                         case 'projects':
-                            window.location.href = 'projects/';
+                            window.location.href = getRelativePageUrl('projects/index.html');
                             return 'Opening projects page...';
                         case 'blog':
-                            window.location.href = 'blog/';
+                            window.location.href = getRelativePageUrl('blog/index.html');
                             return 'Opening blog page...';
                         case 'github':
                             window.open('https://github.com/dipinknair', '_blank');

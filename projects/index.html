@@ -23,7 +23,7 @@
         <div class="terminal-content">
             <div class="terminal-line">
                 <span class="prompt">projects@dipin:~$</span>
-                <span class="typing-text">find ./projects -type f -name "*.md" | sort</span>
+                <span class="typing-text">find ./projects/posts -type f -name "*.html" | sort</span>
             </div>
             
             <div class="breadcrumb">
@@ -40,126 +40,10 @@
                 </div>
                 <div class="projects-intro">
                     <h1>Projects Portfolio</h1>
-                    <p>A collection of simulation software, open-source tooling, automation systems, and developer workflow projects.</p>
+                    <p>Project writeups are coming soon.</p>
                     <div class="projects-stats">
-                        <span class="stat">🚀 Focus areas: <strong>5</strong></span>
-                        <span class="stat">⭐ Open source: <strong>PyAnsys</strong></span>
-                        <span class="stat">🔧 Technologies: <strong>10+</strong></span>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Project Filters -->
-            <section class="project-filters">
-                <div class="section-header">
-                    <span class="prompt">filter@projects:~$</span>
-                    <span class="command">grep -r "tech-stack" projects/</span>
-                </div>
-                <div class="filter-controls">
-                    <div class="tech-filters">
-                        <button class="tech-filter active" data-tech="all">all</button>
-                        <button class="tech-filter" data-tech="python">Python</button>
-                        <button class="tech-filter" data-tech="cpp">C++</button>
-                        <button class="tech-filter" data-tech="automation">Automation</button>
-                        <button class="tech-filter" data-tech="docker">Docker</button>
-                    </div>
-                    <div class="sort-controls">
-                        <select class="sort-select">
-                            <option value="recent">Most Recent</option>
-                            <option value="popular">Most Popular</option>
-                            <option value="name">Alphabetical</option>
-                        </select>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Featured Projects -->
-            <section class="featured-projects">
-                <div class="section-header">
-                    <span class="prompt">featured@projects:~$</span>
-                    <span class="command">ls -la featured/</span>
-                </div>
-                
-                <div class="featured-grid">
-                    <div class="featured-project" data-tech="python docker automation">
-                        <div class="project-terminal">
-                            <div class="project-terminal-header">
-                                <div class="terminal-buttons">
-                                    <span class="btn red"></span>
-                                    <span class="btn yellow"></span>
-                                    <span class="btn green"></span>
-                                </div>
-                                <div class="project-title">PyMechanical</div>
-                            </div>
-                            <div class="project-content">
-                                <div class="project-preview">
-                                    <div class="ascii-demo">
-┌─────────────────────────────────┐
-│  PyMechanical                   │
-│                                 │
-│  ✓ Python API for Mechanical    │
-│  ✓ Open-source PyAnsys library  │
-│  ✓ Testing and documentation    │
-│  ✓ Release automation           │
-│                                 │
-│  Python + Docker + Azure DevOps │
-└─────────────────────────────────┘
-                                    </div>
-                                </div>
-                                <div class="project-details">
-                                    <p>Open-source Python library enabling programmatic access to Ansys Mechanical, with maintained testing, release, CI/CD, and documentation workflows.</p>
-                                    <div class="project-tech-stack">
-                                        <span class="tech-badge">Python</span>
-                                        <span class="tech-badge">PyAnsys</span>
-                                        <span class="tech-badge">Docker</span>
-                                        <span class="tech-badge">Azure DevOps</span>
-                                    </div>
-                                    <div class="project-links">
-                                        <a href="https://github.com/ansys/pymechanical" class="project-link" target="_blank" rel="noopener noreferrer">
-                                            <i class="fab fa-github"></i> GitHub
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="featured-project" data-tech="python automation">
-                        <div class="project-terminal">
-                            <div class="project-terminal-header">
-                                <div class="terminal-buttons">
-                                    <span class="btn red"></span>
-                                    <span class="btn yellow"></span>
-                                    <span class="btn green"></span>
-                                </div>
-                                <div class="project-title">Robotics Batch Testing</div>
-                            </div>
-                            <div class="project-content">
-                                <div class="project-preview">
-                                    <div class="ascii-demo">
-┌─────────────────────────────────┐
-│  Robotics Batch Testing         │
-│                                 │
-│  ● 600+ air fresheners tested   │
-│  ● Robot weighing workflow      │
-│  ● QR-code vision integration   │
-│  ● Siemens data uploads         │
-│                                 │
-│  Python + PyQt + Automation     │
-└─────────────────────────────────┘
-                                    </div>
-                                </div>
-                                <div class="project-details">
-                                    <p>Automated fragrance consumption analysis using robotic batch testing workflows, QR-code computer vision, validated server uploads, and a Python PyQt GUI.</p>
-                                    <div class="project-tech-stack">
-                                        <span class="tech-badge">Python</span>
-                                        <span class="tech-badge">PyQt</span>
-                                        <span class="tech-badge">Computer Vision</span>
-                                        <span class="tech-badge">Automation</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <span class="stat">🚀 Project pages: <strong>0</strong></span>
+                        <span class="stat">📌 Status: <strong>Coming soon</strong></span>
                     </div>
                 </div>
             </section>
@@ -168,163 +52,33 @@
             <section class="all-projects">
                 <div class="section-header">
                     <span class="prompt">all@projects:~$</span>
-                    <span class="command">ls -la --color=auto</span>
+                    <span class="command">find posts/ -name "*.html"</span>
                 </div>
-                
+
                 <div class="projects-grid">
-                    <!-- Project 1 -->
-                    <div class="project-card" data-tech="python docker automation">
+                    <div class="project-card" data-tech="placeholder">
                         <div class="project-header">
-                            <div class="project-icon">🐍</div>
+                            <div class="project-icon">📁</div>
                             <div class="project-meta">
-                                <h3><a href="https://github.com/ansys/pymechanical" target="_blank" rel="noopener noreferrer">PyMechanical</a></h3>
-                                <p class="project-subtitle">PyAnsys Open-Source Library</p>
+                                <h3>Coming Soon</h3>
+                                <p class="project-subtitle">Project details will be added later</p>
                             </div>
                             <div class="project-status">
-                                <span class="status-badge active">Active</span>
+                                <span class="status-badge maintenance">Placeholder</span>
                             </div>
                         </div>
-                        
+
                         <div class="project-description">
-                            <p>Python interface for programmatic access to Ansys Mechanical, maintained with testing, documentation, release, and CI/CD ownership.</p>
+                            <p>New project writeups will appear here when they are ready.</p>
                         </div>
-                        
+
                         <div class="project-footer">
                             <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">PyAnsys</span>
-                                <span class="tech-tag">CI/CD</span>
+                                <span class="tech-tag">Coming Soon</span>
                             </div>
                             <div class="project-stats">
-                                <span class="stat">Open source</span>
+                                <span class="stat">0 published</span>
                             </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 2 -->
-                    <div class="project-card" data-tech="docker automation">
-                        <div class="project-header">
-                            <div class="project-icon">🚀</div>
-                            <div class="project-meta">
-                                <h3>Release Automation Pipelines</h3>
-                                <p class="project-subtitle">Docker and Azure DevOps</p>
-                            </div>
-                            <div class="project-status">
-                                <span class="status-badge active">Active</span>
-                            </div>
-                        </div>
-                        
-                        <div class="project-description">
-                            <p>Containerized Windows and Linux release workflows that reduced release cycles by 30% across production simulation software pipelines.</p>
-                        </div>
-                        
-                        <div class="project-footer">
-                            <div class="project-tech">
-                                <span class="tech-tag">Docker</span>
-                                <span class="tech-tag">Azure DevOps</span>
-                                <span class="tech-tag">CI/CD</span>
-                            </div>
-                            <div class="project-stats">
-                                <span class="stat">30% faster releases</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card" data-tech="python automation">
-                        <div class="project-header">
-                            <div class="project-icon">🤖</div>
-                            <div class="project-meta">
-                                <h3>Robotics Batch Testing</h3>
-                                <p class="project-subtitle">Python PyQt Automation</p>
-                            </div>
-                            <div class="project-status">
-                                <span class="status-badge completed">Completed</span>
-                            </div>
-                        </div>
-                        
-                        <div class="project-description">
-                            <p>Automated fragrance consumption analysis for 600+ air fresheners using robot weighing, QR-code computer vision, and validated server uploads.</p>
-                        </div>
-                        
-                        <div class="project-footer">
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">PyQt</span>
-                                <span class="tech-tag">Automation</span>
-                            </div>
-                            <div class="project-stats">
-                                <span class="stat">600+ tests</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 4 -->
-                    <div class="project-card" data-tech="cpp automation">
-                        <div class="project-header">
-                            <div class="project-icon">⚙️</div>
-                            <div class="project-meta">
-                                <h3>MASTA Efficiency Modules</h3>
-                                <p class="project-subtitle">C++ Simulation Software</p>
-                            </div>
-                            <div class="project-status">
-                                <span class="status-badge completed">Completed</span>
-                            </div>
-                        </div>
-                        
-                        <div class="project-description">
-                            <p>Development of 12 transmission efficiency modules in MASTA software, paired with SimLab meshing automation for simulation analysis.</p>
-                        </div>
-                        
-                        <div class="project-footer">
-                            <div class="project-tech">
-                                <span class="tech-tag">C++</span>
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">SimLab</span>
-                            </div>
-                            <div class="project-stats">
-                                <span class="stat">12 modules</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Open Source Contributions -->
-            <section class="open-source">
-                <div class="section-header">
-                    <span class="prompt">opensource@projects:~$</span>
-                    <span class="command">git log --author="dipin" --oneline</span>
-                </div>
-                
-                <div class="contributions-list">
-                    <div class="contribution-item">
-                        <div class="commit-info">
-                            <span class="commit-hash">a3b2c1d</span>
-                            <span class="commit-date">2023-present</span>
-                            <span class="repo-name">ansys/pymechanical</span>
-                        </div>
-                        <div class="commit-message">
-                            Maintain PyMechanical testing, release, CI/CD, and documentation workflows
-                        </div>
-                        <div class="contribution-stats">
-                            <span class="stat">Maintainer</span>
-                            <span class="status merged">Active</span>
-                        </div>
-                    </div>
-                    
-                    <div class="contribution-item">
-                        <div class="commit-info">
-                            <span class="commit-hash">f4e5d6c</span>
-                            <span class="commit-date">2023-present</span>
-                            <span class="repo-name">PyAnsys ecosystem</span>
-                        </div>
-                        <div class="commit-message">
-                            Contribute Python tooling for simulation software and customer-facing workflows
-                        </div>
-                        <div class="contribution-stats">
-                            <span class="stat">Contributor</span>
-                            <span class="status merged">Active</span>
                         </div>
                     </div>
                 </div>
