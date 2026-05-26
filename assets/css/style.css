@@ -437,7 +437,28 @@ body {
 .achievements {
     color: var(--text-secondary);
     line-height: 1.8;
-    margin-left: 0;
+    margin: 10px 0 0 22px;
+}
+
+.experience-dropdown {
+    margin-top: 8px;
+}
+
+.experience-dropdown summary {
+    color: var(--accent-blue);
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    list-style-position: inside;
+    user-select: none;
+}
+
+.experience-dropdown summary:hover {
+    color: var(--accent-green);
+}
+
+.experience-dropdown[open] summary {
+    margin-bottom: 8px;
 }
 
 /* Education Section */
@@ -722,6 +743,7 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
+    flex-wrap: wrap;
     margin-bottom: 20px;
 }
 
@@ -744,23 +766,24 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.file-info {
-    color: var(--text-muted);
-    font-size: 12px;
+.preview-btn {
+    border: 1px solid var(--accent-blue);
+    color: var(--accent-blue);
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    font-weight: bold;
 }
 
-.resume-preview {
-    color: var(--text-secondary);
-}
-
-.resume-preview ul {
-    margin-left: 20px;
-    margin-top: 10px;
-}
-
-.resume-preview li {
-    margin-bottom: 8px;
-    color: var(--text-muted);
+.preview-btn:hover {
+    background: var(--accent-blue);
+    color: var(--bg-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Contact Section */
