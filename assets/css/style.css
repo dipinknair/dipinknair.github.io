@@ -421,7 +421,7 @@ body {
 }
 
 .company-name {
-    color: var(--accent-green);
+    color: var(--accent-blue);
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 2px;
@@ -444,7 +444,7 @@ body {
 }
 
 .experience-dropdown summary {
-    color: var(--accent-blue);
+    color: var(--text-muted);
     cursor: pointer;
     font-size: 0.9rem;
     font-weight: 600;
@@ -453,7 +453,7 @@ body {
 }
 
 .experience-dropdown summary:hover {
-    color: var(--accent-green);
+    color: var(--text-secondary);
 }
 
 .experience-dropdown[open] summary {
