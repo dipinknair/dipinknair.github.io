@@ -78,7 +78,7 @@ function applySectionConfig() {
         if (section && navLink) {
             if (SECTION_CONFIG[sectionId]) {
                 section.style.display = 'block';
-                navLink.style.display = 'inline';
+                navLink.style.display = 'inline-flex';
             } else {
                 section.style.display = 'none';
                 navLink.style.display = 'none';
@@ -98,7 +98,7 @@ function applySectionConfig() {
         visibleLinks.forEach((link, index) => {
             newHTML += link.outerHTML;
             if (index < visibleLinks.length - 1) {
-                newHTML += ' <span style="color: var(--text-muted); margin: 0 2px;">|</span> ';
+                newHTML += ' <span class="nav-separator">|</span> ';
             }
         });
         

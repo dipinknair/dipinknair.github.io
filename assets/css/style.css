@@ -245,7 +245,7 @@ body {
 /* Navigation */
 .terminal-nav {
     margin: 30px 0;
-    padding: 20px 0;
+    padding: 18px 0;
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
 }
@@ -260,7 +260,7 @@ body {
 .nav-commands {
     display: flex;
     flex-wrap: nowrap;
-    gap: 8px;
+    gap: 6px;
     align-items: center;
     white-space: nowrap;
 }
@@ -268,32 +268,31 @@ body {
 .nav-cmd {
     color: var(--accent-blue);
     text-decoration: none;
-    padding: 3px 6px;
-    border-radius: 4px;
+    padding: 6px 10px;
+    border: 1px solid transparent;
+    border-radius: 999px;
     transition: all 0.3s ease;
     position: relative;
     font-size: inherit;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
 }
 
-.nav-cmd:hover {
-    background: var(--bg-tertiary);
-    color: var(--accent-green);
-    transform: translateY(-1px);
+.nav-cmd:hover,
+.nav-cmd:focus,
+.nav-cmd.active {
+    color: var(--accent-yellow);
+    outline: none;
 }
 
-.nav-cmd:before {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--accent-green);
-    transition: width 0.3s ease;
-}
-
-.nav-cmd:hover:before {
-    width: 100%;
+.nav-separator {
+    color: var(--accent-orange);
+    font-weight: 700;
+    opacity: 0.55;
+    margin: 0 2px;
 }
 
 /* Sections */
