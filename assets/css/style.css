@@ -747,7 +747,7 @@ body {
 }
 
 .download-btn {
-    background: var(--accent-green);
+    background: var(--accent-blue);
     color: var(--bg-primary);
     padding: 12px 20px;
     text-decoration: none;
@@ -757,17 +757,20 @@ body {
     gap: 8px;
     transition: all 0.3s ease;
     font-weight: bold;
+    border: 1px solid var(--accent-blue);
 }
 
 .download-btn:hover {
-    background: var(--accent-blue);
+    background: transparent;
+    color: var(--accent-blue);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .preview-btn {
     border: 1px solid var(--accent-blue);
-    color: var(--accent-blue);
+    background: var(--accent-blue);
+    color: var(--bg-primary);
     padding: 12px 20px;
     text-decoration: none;
     border-radius: 6px;
@@ -779,8 +782,8 @@ body {
 }
 
 .preview-btn:hover {
-    background: var(--accent-blue);
-    color: var(--bg-primary);
+    background: transparent;
+    color: var(--accent-blue);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
@@ -829,18 +832,18 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    color: var(--text-secondary);
+    color: var(--accent-blue);
     text-decoration: none;
     padding: 12px 20px;
     background: var(--bg-secondary);
     border-radius: 6px;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--accent-blue);
     transition: all 0.3s ease;
 }
 
 .social-link:hover {
-    color: var(--accent-green);
-    background: var(--bg-tertiary);
+    color: var(--bg-primary);
+    background: var(--accent-blue);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
