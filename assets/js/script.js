@@ -472,11 +472,11 @@ Terminal Portfolio Help:
     };
     
     window.skills = () => {
-        console.log('Skills: JavaScript, Python, React, Node.js, Docker, AWS, and more!');
+        console.log('Skills: Python, C++, C#, MATLAB, Docker, GitHub Actions, Azure DevOps, CI/CD, and more!');
     };
     
     window.contact = () => {
-        console.log('Email: dipin.nair@example.com | GitHub: github.com/nairdk');
+        console.log('Email: dipinknair619@gmail.com | GitHub: github.com/dipinknair');
     };
     
     window.projects = () => {
@@ -521,29 +521,28 @@ Use Ctrl+T to quickly toggle theme or click the button in terminal header.`
             
             about: {
                 description: 'Show information about Dipin',
-                action: () => `Software Developer with 6+ years of experience in Python and C++ specializing in simulation software and automation.
-Currently R&D Engineer II at Ansys, core contributor to Ansys Mechanical software and PyMechanical maintainer.
-Strong mathematical background with expertise in robotics, AI, and DevOps workflows.`
+                action: () => `Software Engineer with 7+ years of experience building production-level Python and C++ software for simulation, automation, and developer tooling.
+Maintains PyMechanical and contributes to the PyAnsys open-source ecosystem, with ownership of testing, releases, CI/CD, and documentation.
+Focused on scalable Python platforms, open-source tooling, and reliable customer-facing software.`
             },
             
             skills: {
                 description: 'List technical skills',
                 action: () => `Technical Skills:
-• Programming: C/C++, Python, JavaScript, HTML, CSS, MATLAB, XML, SQL, LaTeX
-• Tools: Visual Studio, VS Code, Git, Microsoft Azure, Linux, GitHub, CI/CD, Jupyter
-• CAE Software: Ansys, Abaqus, SimLab, Hypermesh, UG NX
-• Specialties: PyAnsys Libraries, Simulation Software, Automation, DevOps
-• Soft Skills: Problem-solving, Leadership, Six Sigma Black Belt`
+• Programming: Python, C++, C#, MATLAB
+• Software Engineering: Unit Testing, Object-Oriented Programming, Automation, Agile/Scrum
+• Tools/DevOps: Git, Docker, Linux, GitHub Actions, Azure DevOps, CI/CD
+• Specialties: PyMechanical, PyAnsys Libraries, Simulation Software, Developer Tooling`
             },
             
             projects: {
                 description: 'Show recent projects',
                 action: () => `Recent Projects:
-• PyAnsys Open Source Libraries - Core contributor to simulation software packages
-• Classification of Rice using AI - Genetic Fuzzy Cascading system with 94.36% accuracy
-• Real-time Path Planning - Dijkstra and A* algorithms for dynamic obstacle avoidance
-• MASTA Efficiency Modules - 12 different C++ modules for transmission optimization
-• SimLab Automation - JavaScript-based meshing automation for simulation analysis
+• PyMechanical - PyAnsys open-source Python library for programmatic access to Ansys Mechanical
+• Docker and Azure DevOps Pipelines - Containerized release workflows across Windows and Linux
+• Automated Regression Frameworks - Unit and integration test coverage for production simulation software
+• Robotics Batch Testing - Python/PyQt tooling, QR-code vision, and Siemens server workflows
+• MASTA Efficiency Modules - C++ modules for transmission optimization
 Type 'open projects' to view detailed project information.`
             },
             
@@ -569,33 +568,40 @@ Type 'open blog' to view all posts.`
             education: {
                 description: 'Show educational background',
                 action: () => `Educational Background:
-[2021-2023] Master of Science in Mechanical Engineering
-🎓 University of Cincinnati
-• GPA: 4.0/4.0 (Perfect GPA)
-• Specialization: Engineering Simulation and Automation
-• Research: AI Techniques for Classification Systems
+[Jan 2021-Aug 2023] Master of Science in Mechanical Engineering
+University of Cincinnati - Cincinnati, Ohio
+• GPA: 4.0/4.0
+• Focus: simulation, automation, robotics, and production software workflows
 
-[2012-2016] Bachelor of Technology in Mechanical Engineering
-🎓 Indian Institute of Technology, Hyderabad
+[Aug 2012-Aug 2016] Bachelor of Technology in Mechanical Engineering
+Indian Institute of Technology, Hyderabad - Hyderabad, India
 • GPA: 8.24/10
-• Strong foundation in Engineering Mathematics and Physics
-• Technical projects in manufacturing and automation systems`
+• Strong foundation in engineering mathematics, simulation, and mechanical systems`
             },
             
             experience: {
                 description: 'Show work experience',
                 action: () => `Work Experience:
-[2023-present] R&D Engineer II - Ansys Inc.
-• Developed PyAnsys Open Source Libraries and supported Ansys Mechanical production
-• Conducted Scrum meetings for PyMechanical Python package
-• Worked with Linear Dynamics team for new ANSYS Mechanical features
-• Made major contributions through Azure and ARM testing
+[2023-present] Senior Software Engineer - Synopsys Inc.
+• Architected and maintained PyMechanical, a PyAnsys open-source Python library
+• Built Docker-based containerization and Azure DevOps CI/CD pipelines, reducing release cycles by 30%
+• Increased automated regression coverage from 70% to 90%
 
-[2016-2020] Senior Engineer - General Motors
-• Earned Design for Six Sigma Black Belt supervising 2 projects
-• Coordinated 12 efficiency modules in MASTA using C++
-• Led team of 4 to automate meshing in SimLab with JavaScript
-• Automated Abaqus modeling reducing 85% of man hours`
+[2023] Software Developer Intern - Ansys Inc.
+• Contributed ANSYS Mechanical release features with the Linear Dynamics team
+• Validated changes through Windows/Linux builds, Azure pipelines, and ARM tests
+
+[2021-2022] Robotics Research Assistant - Procter & Gamble
+• Automated fragrance consumption analysis for 600+ air fresheners
+• Created a Python PyQt GUI to standardize test execution
+
+[2019-2020] Systems Engineer - Tata Consultancy Ltd
+• Coordinated 12 MASTA efficiency modules in C++
+• Led SimLab meshing automation using JavaScript
+
+[2016-2019] Senior Engineer - General Motors
+• Automated Abaqus system modeling with VBA, reducing manual effort by 85%
+• Earned 7 recognitions for transmission efficiency optimization`
             },
             
             resume: {
@@ -624,10 +630,10 @@ Type 'open blog' to view all posts.`
                             window.location.href = 'blog/';
                             return 'Opening blog page...';
                         case 'github':
-                            window.open('https://github.com/nairdk', '_blank');
+                            window.open('https://github.com/dipinknair', '_blank');
                             return 'Opening GitHub profile...';
                         case 'linkedin':
-                            window.open('https://linkedin.com/in/dipin-nair', '_blank');
+                            window.open('https://linkedin.com/in/dipinknair619', '_blank');
                             return 'Opening LinkedIn profile...';
                         default:
                             return `Unknown section: ${section}. Try 'open projects', 'open blog', 'open github', or 'open linkedin'.`;
