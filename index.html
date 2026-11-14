@@ -1,384 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dipin Nair - Software Engineer</title>
-    <meta name="description" content="Software Engineer Portfolio - Terminal Theme">
-    <!-- To hide/show sections: Edit SECTION_CONFIG in assets/js/script.js -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="only light">
+<meta name="description" content="Dipin Nair — Software Engineer with 7+ years building production Python & C++ software for simulation, automation, and developer tooling.">
+<title>Dipin Nair — Software Engineer</title>
+<style>
+:root{color-scheme:only light;--bg:#f5efe0;--card:#fffaf0;--ink:#1d1a14;--mute:#5e574a;--acc:#d9481c;--hl:#f2c94c;--line:#1d1a14;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Georgia,"Times New Roman",serif}
+h1,h2,h3,.mono,nav,.btn,th,.tag,.meta{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px;flex-wrap:wrap}
+.logo{font-weight:700;text-decoration:none;font-family:ui-monospace,Menlo,monospace}
+.logo small{margin-left:8px;font-weight:400;color:var(--mute);font-size:12px}
+nav{display:flex;gap:6px;font-size:14px;flex-wrap:wrap}
+nav a{text-decoration:none;padding:6px 12px;border:2px solid transparent}
+nav a:hover{border-color:var(--line)}
+nav a.on{border-color:var(--line);background:var(--hl);box-shadow:3px 3px 0 var(--line)}
+.view{display:none}.view.on{display:block}
+.hero{padding:52px 0 46px;border-top:2px solid var(--line)}
+.hero h1{font-size:clamp(34px,6vw,62px);line-height:1.08;margin:12px 0 18px;letter-spacing:-.02em}
+.hero h1 span{background:var(--hl);padding:0 8px}
+.hero p{max-width:640px;font-size:19px;color:var(--mute)}
+.ctas{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:28px}
+.btn{display:block;text-decoration:none;border:2px solid var(--line);background:var(--card);padding:15px 20px;box-shadow:5px 5px 0 var(--line);transition:.12s}
+.btn:hover{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--line)}
+.btn small{display:block;font-size:12px;color:var(--mute);letter-spacing:.04em;text-transform:uppercase}
+.btn b{font-size:17px}
+.btn.pri{background:var(--acc);color:#fff}.btn.pri small{color:#ffe3d8}
+.tag{display:inline-block;font-size:12px;border:1.5px solid var(--line);padding:2px 10px;background:var(--card)}
+.tag.y{background:var(--hl)}
+section{padding:48px 0;border-top:2px solid var(--line)}
+.sh{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+h2{font-size:clamp(24px,3.4vw,34px);margin:0 0 8px;letter-spacing:-.01em}
+.sh a{font-family:ui-monospace,Menlo,monospace;font-size:14px}
+.lead{color:var(--mute);max-width:680px;margin:0 0 26px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(285px,1fr));gap:22px}
+.card{border:2px solid var(--line);background:var(--card);padding:0;box-shadow:5px 5px 0 var(--line);display:flex;flex-direction:column;text-decoration:none}
+a.card{transition:.12s}a.card:hover{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--line)}
+.card .body{padding:18px 20px 20px}
+.card h3{margin:8px 0 6px;font-size:17px;line-height:1.35}
+.card p{margin:0;color:var(--mute);font-size:15.5px}
+.thumb{height:150px;border-bottom:2px solid var(--line);display:flex;align-items:center;justify-content:center;font:700 13px ui-monospace,Menlo,monospace;color:var(--ink);background:
+repeating-linear-gradient(45deg,transparent 0 12px,rgba(29,26,20,.07) 12px 14px),var(--c,#f2c94c)}
+.ico{font-size:26px;color:var(--acc);line-height:1}
+.pad{padding:22px}
+.meta{font-size:12.5px;color:var(--mute)}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+.about{display:grid;grid-template-columns:240px 1fr;gap:32px;align-items:start}
+.avatar{aspect-ratio:1;border:2px solid var(--line);box-shadow:5px 5px 0 var(--line);background:repeating-linear-gradient(45deg,transparent 0 12px,rgba(29,26,20,.07) 12px 14px),var(--hl);display:flex;align-items:center;justify-content:center;font:700 54px ui-monospace,Menlo,monospace}
+@media(max-width:640px){.about{grid-template-columns:1fr}.avatar{max-width:200px}}
+.about p{margin:0 0 14px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-top:8px}
+.stat{border:2px solid var(--line);background:var(--card);padding:14px 16px;box-shadow:4px 4px 0 var(--line)}
+.stat b{display:block;font:700 28px ui-monospace,Menlo,monospace;color:var(--acc)}
+.stat span{font-size:13.5px;color:var(--mute)}
+.job{border:2px solid var(--line);background:var(--card);margin-bottom:18px;box-shadow:5px 5px 0 var(--line)}
+.job summary{cursor:pointer;list-style:none;padding:16px 22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center}
+.job summary::-webkit-details-marker{display:none}
+.job summary b{font-family:ui-monospace,Menlo,monospace;font-size:17px;display:block}
+.job summary span{color:var(--mute);font-size:15px}
+.job[open] summary{border-bottom:2px solid var(--line)}
+.job ul{margin:0;padding:16px 22px 18px 42px;color:var(--mute);font-size:15.5px}
+.job li{margin-bottom:7px}
+.post{display:grid;grid-template-columns:130px 1fr auto;gap:18px;align-items:center;border:2px solid var(--line);background:var(--card);padding:18px 22px;margin-bottom:18px;box-shadow:5px 5px 0 var(--line);text-decoration:none;transition:.12s}
+.post:hover{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--line)}
+.post h3{margin:0 0 4px;font-size:18px}.post p{margin:0;color:var(--mute);font-size:15.5px}
+@media(max-width:640px){.post{grid-template-columns:1fr;gap:8px}}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.chip{font:13px ui-monospace,Menlo,monospace;border:2px solid var(--line);padding:4px 14px;background:var(--card);cursor:pointer}
+.chip.on{background:var(--ink);color:var(--bg)}
+.note{font-size:13px;color:var(--mute);margin-top:14px}
+footer{border-top:2px solid var(--line);padding:26px 0 40px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:14px;color:var(--mute)}
+</style>
 </head>
 <body>
-    <div class="terminal-window">
-        <div class="terminal-header">
-            <div class="terminal-buttons">
-                <span class="btn red"></span>
-                <span class="btn yellow"></span>
-                <span class="btn green"></span>
-            </div>
-            <div class="terminal-title">dipin@portfolio</div>
-            <div class="theme-toggle-header">
-                <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme (Ctrl+T)">
-                    <div id="themeIcon" class="theme-icon theme-icon-dark">
-                        <div class="theme-switcher-icon">
-                            <div class="icon-half dark-half"></div>
-                            <div class="icon-half light-half"></div>
-                        </div>
-                    </div>
-                </button>
-            </div>
-        </div>
-        
-        <div class="terminal-content">
-            <!-- Interactive Terminal -->
-            <div class="terminal-prompt-line">
-                <span class="prompt">terminal@dipin:~$</span>
-                <input type="text" class="terminal-input" placeholder="Type 'help' for available commands..." autofocus>
-                <span class="cursor">_</span>
-            </div>
-            <div class="terminal-output" id="terminalOutput"></div>
-            
-            <!-- Navigation Menu -->
-            <nav class="terminal-nav">
-                <div class="nav-line">
-                    <span class="prompt">navigation@dipin:~$</span>
-                    <span class="nav-commands">
-                        <a href="#about" class="nav-cmd">./about</a>
-                        <span class="nav-separator">|</span>
-                        <a href="#experience" class="nav-cmd">./experience</a>
-                        <span class="nav-separator">|</span>
-                        <a href="#education" class="nav-cmd">./education</a>
-                        <span class="nav-separator">|</span>
-                        <a href="#projects" class="nav-cmd">./projects</a>
-                        <span class="nav-separator">|</span>
-                        <a href="#blog" class="nav-cmd">./blog</a>
-                        <span class="nav-separator">|</span>
-                        <a href="#resume" class="nav-cmd">./resume</a>
-                        <span class="nav-separator">|</span>
-                        <a href="#contact" class="nav-cmd">./contact</a>
-                    </span>
-                </div>
-            </nav>
+<div class="wrap">
+<header>
+  <a class="logo" href="#home">Dipin Nair<small>Est. 2016</small></a>
+  <nav id="nav"><a href="#home" data-v="home">Home</a><a href="#about" data-v="about">About</a><a href="#projects" data-v="projects">Projects</a><a href="#blog" data-v="blog">Blog</a><a href="#contact" data-v="contact">Contact</a></nav>
+</header>
 
-            <!-- About Section -->
-            <section id="about" class="terminal-section">
-                <div class="section-header">
-                    <span class="prompt">about@dipin:~$</span>
-                    <span class="command">cat about.txt</span>
-                </div>
-                <div class="section-content">
-                    <p class="about-text">
-                        Hello! I'm a Software Engineer with 7+ years of experience building production-level Python and C++ software for simulation, automation, and developer tooling.
-                        I maintain PyMechanical and contribute to the PyAnsys open-source ecosystem, with ownership across testing, releases, CI/CD, and documentation.
-                        I'm focused on scalable Python platforms, open-source tooling, and reliable customer-facing software. Welcome to my digital workspace!
-                    </p>
-                    <div class="skills-list">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">C++</span>
-                        <span class="skill-tag">C#</span>
-                        <span class="skill-tag">PyMechanical</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">CI/CD</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Experience Section -->
-            <section id="experience" class="terminal-section">
-                <div class="section-header">
-                    <span class="prompt">experience@dipin:~$</span>
-                    <span class="command">ls -la work_history/</span>
-                </div>
-                <div class="section-content">
-                    <div class="experience-item">
-                        <div class="exp-header">
-                            <span class="file-permissions">-rw-r--r--</span>
-                            <span class="file-date">2023-present</span>
-                        </div>
-                        <div class="exp-details">
-                            <div class="company-title">
-                                <span class="company-name">Synopsys Inc.</span>
-                                <span class="job-title">Senior Software Engineer</span>
-                            </div>
-                            <details class="experience-dropdown">
-                                <summary>View responsibilities</summary>
-                                <ul class="achievements">
-                                    <li>Architected and maintained PyMechanical, a PyAnsys open-source Python library enabling programmatic access to Ansys Mechanical.</li>
-                                    <li>Engineered Docker-based containerization and Azure DevOps CI/CD pipelines, reducing release cycles by 30% across Windows and Linux platforms.</li>
-                                    <li>Developed unit and integration testing frameworks, increasing automated regression coverage from 70% to 90%.</li>
-                                    <li>Resolved critical production bugs in ANSYS Mechanical core software (C++/C#) and improved customer-facing workflow reliability.</li>
-                                </ul>
-                            </details>
-                        </div>
-                    </div>
-                    
-                    <div class="experience-item">
-                        <div class="exp-header">
-                            <span class="file-permissions">-rw-r--r--</span>
-                            <span class="file-date">2023</span>
-                        </div>
-                        <div class="exp-details">
-                            <div class="company-title">
-                                <span class="company-name">Ansys Inc.</span>
-                                <span class="job-title">Software Developer Intern</span>
-                            </div>
-                            <details class="experience-dropdown">
-                                <summary>View responsibilities</summary>
-                                <ul class="achievements">
-                                    <li>Contributed ANSYS Mechanical release features with the Linear Dynamics team, supporting production C++/C# development workflows.</li>
-                                    <li>Validated changes through Windows/Linux developer builds, Azure pipelines, and ARM tests before integration.</li>
-                                    <li>Applied COM principles to extend Mechanical interfaces and partnered with test teams to triage defects and document release functionality.</li>
-                                </ul>
-                            </details>
-                        </div>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="exp-header">
-                            <span class="file-permissions">-rw-r--r--</span>
-                            <span class="file-date">2021-2022</span>
-                        </div>
-                        <div class="exp-details">
-                            <div class="company-title">
-                                <span class="company-name">Procter &amp; Gamble</span>
-                                <span class="job-title">Robotics Research Assistant</span>
-                            </div>
-                            <details class="experience-dropdown">
-                                <summary>View responsibilities</summary>
-                                <ul class="achievements">
-                                    <li>Automated fragrance consumption analysis for 600+ air fresheners using robotic batch testing workflows.</li>
-                                    <li>Enabled robot weighing, QR-code computer vision, and validated data uploads to Siemens server workflows.</li>
-                                    <li>Created a Python PyQt GUI to improve customer interaction and standardize test execution.</li>
-                                </ul>
-                            </details>
-                        </div>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="exp-header">
-                            <span class="file-permissions">-rw-r--r--</span>
-                            <span class="file-date">2019-2020</span>
-                        </div>
-                        <div class="exp-details">
-                            <div class="company-title">
-                                <span class="company-name">Tata Consultancy Ltd</span>
-                                <span class="job-title">Systems Engineer</span>
-                            </div>
-                            <details class="experience-dropdown">
-                                <summary>View responsibilities</summary>
-                                <ul class="achievements">
-                                    <li>Earned Design for Six Sigma Black Belt certification by supervising 2 projects as team leader and facilitator.</li>
-                                    <li>Coordinated development of 12 efficiency modules in MASTA software using C++.</li>
-                                    <li>Led a cross-functional team of 4 to automate meshing in SimLab using JavaScript for simulation analysis.</li>
-                                </ul>
-                            </details>
-                        </div>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="exp-header">
-                            <span class="file-permissions">-rw-r--r--</span>
-                            <span class="file-date">2016-2019</span>
-                        </div>
-                        <div class="exp-details">
-                            <div class="company-title">
-                                <span class="company-name">General Motors</span>
-                                <span class="job-title">Senior Engineer</span>
-                            </div>
-                            <details class="experience-dropdown">
-                                <summary>View responsibilities</summary>
-                                <ul class="achievements">
-                                    <li>Automated Abaqus system modeling with VBA scripting, reducing manual effort by 85%.</li>
-                                    <li>Earned 7 recognitions, including Work of Wonder and Pat on the Back, for transmission efficiency optimization.</li>
-                                </ul>
-                            </details>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Education Section -->
-            <section id="education" class="terminal-section">
-                <div class="section-header">
-                    <span class="prompt">education@dipin:~$</span>
-                    <span class="command">cat academic_records.txt</span>
-                </div>
-                <div class="section-content">
-                    <div class="education-item">
-                        <div class="edu-header">
-                            <span class="file-permissions">-rw-r--r--</span>
-                            <span class="file-date">2021-2023</span>
-                        </div>
-                        <div class="edu-details">
-                            <div class="degree-info">
-                                <span class="university-name">University of Cincinnati</span>
-                                <span class="degree-title">Master of Science in Mechanical Engineering</span>
-                            </div>
-                            <div class="academic-details">
-                                <span class="gpa">GPA: 4.0/4.0</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="education-item">
-                        <div class="edu-header">
-                            <span class="file-permissions">-rw-r--r--</span>
-                            <span class="file-date">2012-2016</span>
-                        </div>
-                        <div class="edu-details">
-                            <div class="degree-info">
-                                <span class="university-name">Indian Institute of Technology, Hyderabad</span>
-                                <span class="degree-title">Bachelor of Technology in Mechanical Engineering</span>
-                            </div>
-                            <div class="academic-details">
-                                <span class="gpa">GPA: 8.24/10</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Projects Section -->
-                        <!-- Projects Section -->
-            <section id="projects" class="terminal-section">
-                <div class="section-header">
-                    <span class="prompt">projects@dipin:~$</span>
-                    <span class="command">find ./projects/posts -name "*.html"</span>
-                </div>
-                <div class="section-content">
-                    <div class="project-item">
-                        <a href="projects/index.html" class="project-link">
-                            <span class="file-icon">📁</span>
-                            <span class="project-name">./projects/</span>
-                        </a>
-                        <p class="project-desc">Project writeups are coming soon.</p>
-                    </div>
-                    
-                    <div class="project-preview">
-                        <a href="projects/index.html" class="project-card-link">
-                            <div class="project-card">
-                                <h4>Coming Soon</h4>
-                                <p>Project details will be added here later.</p>
-                                <div class="project-tags">
-                                    <span class="tag">Projects</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    
-                    <div class="view-all-projects">
-                        <a href="projects/index.html" class="view-all-btn">
-                            <span class="prompt">projects@dipin:~$</span>
-                            <span class="command">ls -la ./projects/</span>
-                            <span class="output">→ View all projects</span>
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Blog Section -->
-            <section id="blog" class="terminal-section">
-                <div class="section-header">
-                    <span class="prompt">blog@dipin:~$</span>
-                    <span class="command">ls -t blog/ | head -5</span>
-                </div>
-                <div class="section-content">
-                    <div class="blog-item">
-                        <a href="blog/index.html" class="blog-link">
-                            <span class="file-icon">📝</span>
-                            <span class="blog-name">./blog/</span>
-                        </a>
-                        <p class="blog-desc">Blog posts are coming soon.</p>
-                    </div>
-                    
-                    <div class="blog-preview">
-                        <a href="blog/index.html" class="blog-post-link">
-                            <div class="blog-post">
-                                <span class="post-date">[soon]</span>
-                                <span class="post-title">Coming Soon</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Resume Section -->
-            <section id="resume" class="terminal-section">
-                <div class="section-header">
-                    <span class="prompt">resume@dipin:~$</span>
-                    <span class="command">cat resume.pdf | head</span>
-                </div>
-                <div class="section-content">
-                    <div class="resume-download">
-                        <a href="assets/documents/resume.pdf" class="download-btn" id="downloadResume" download="Dipin_Nair_Resume.pdf">
-                            <i class="fas fa-download"></i>
-                            Download Resume (PDF)
-                        </a>
-                        <a href="https://dipinknair.github.io/resume/" class="preview-btn" target="_blank" rel="noopener noreferrer">
-                            <i class="fas fa-eye"></i>
-                            Preview Resume
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Contact Section -->
-            <section id="contact" class="terminal-section">
-                <div class="section-header">
-                    <span class="prompt">contact@dipin:~$</span>
-                    <span class="command">./connect.sh</span>
-                </div>
-                <div class="section-content">
-                    <div class="contact-info">
-                        <p>Let's connect and build something amazing together!</p>
-                        
-                        <div class="contact-methods">
-                            <div class="contact-item">
-                                <span class="contact-label">Email:</span>
-                                <a href="mailto:dipinknair619@gmail.com" class="contact-link">
-                                    dipinknair619@gmail.com
-                                </a>
-                            </div>
-                            
-                            <div class="contact-item">
-                                <span class="contact-label">Phone:</span>
-                                <a href="tel:+15136200022" class="contact-link">
-                                    +1 (513) 620-0022
-                                </a>
-                            </div>
-                            
-                            <div class="contact-item">
-                                <span class="contact-label">Location:</span>
-                                <span class="contact-text">Austin, TX</span>
-                            </div>
-                            
-                            <div class="social-links">
-                                <a href="https://github.com/dipinknair" target="_blank" class="social-link" id="githubLink" rel="noopener noreferrer">
-                                    <i class="fab fa-github"></i>
-                                    <span>GitHub</span>
-                                </a>
-                                
-                                <a href="https://linkedin.com/in/dipinknair619" target="_blank" class="social-link" id="linkedinLink" rel="noopener noreferrer">
-                                    <i class="fab fa-linkedin"></i>
-                                    <span>LinkedIn</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <div class="terminal-prompt-footer">
-                <span class="prompt">terminal@dipin:~$</span>
-                <button type="button" class="clear-site-btn" id="clearSite">
-                    clear
-                </button>
-                <span class="footer-hint">Clear output and return to top</span>
-            </div>
-        </div>
+<!-- HOME -->
+<main class="view" id="v-home">
+  <div class="hero">
+    <span class="tag y">Austin, TX · Senior Software Engineer</span>
+    <h1>Python &amp; C++ tooling<br>that <span>actually ships.</span></h1>
+    <p>7+ years building production software for simulation, automation and developer tooling. I maintain PyMechanical and contribute to the PyAnsys open-source ecosystem.</p>
+    <div class="ctas">
+      <a class="btn pri" href="#projects"><small>01 / Selected work</small><b>See my projects →</b></a>
+      <a class="btn" href="#about"><small>02 / The story so far</small><b>About me →</b></a>
     </div>
+  </div>
 
-    <script src="assets/js/script.js"></script>
+  <section>
+    <div class="sh"><h2>Featured Projects</h2><a href="#projects">All projects →</a></div>
+    <p class="lead">Open-source libraries, CI/CD pipelines, and automation tools I've built or maintained.</p>
+    <div class="grid">
+      <a class="card" href="#projects"><div class="thumb" style="--c:#f2c94c">PyMechanical</div><div class="body"><span class="meta">2023 – present · Open source</span><h3>PyMechanical</h3><p>PyAnsys open-source Python library enabling programmatic access to Ansys Mechanical for simulation workflows.</p><div class="tags"><span class="tag">Python</span><span class="tag">gRPC</span><span class="tag">Docker</span></div></div></a>
+      <a class="card" href="#projects"><div class="thumb" style="--c:#f4a98a">CI/CD</div><div class="body"><span class="meta">2024 · Automation</span><h3>CI/CD Pipeline Framework</h3><p>Docker-based containerization and Azure DevOps pipelines that cut release cycles by 30% across Windows and Linux.</p><div class="tags"><span class="tag">Azure DevOps</span><span class="tag">Docker</span></div></div></a>
+      <a class="card" href="#projects"><div class="thumb" style="--c:#b9d8c2">Testing</div><div class="body"><span class="meta">2024 · Testing</span><h3>Regression Test Suite</h3><p>Unit and integration testing frameworks that lifted automated regression coverage from 70% to 90%.</p><div class="tags"><span class="tag">pytest</span><span class="tag">C#</span></div></div></a>
+    </div>
+  </section>
+
+  <section>
+    <div class="sh"><h2>Latest from the Blog</h2><a href="#blog">All posts →</a></div>
+    <p class="lead">Notes on engineering, open source, and career transitions.</p>
+    <div class="grid">
+      <a class="card" href="#blog"><div class="body"><span class="meta">Coming soon</span><h3>Blog posts are on the way</h3><p>Stay tuned — writing about Python tooling, CI/CD, and open-source maintenance.</p></div></a>
+    </div>
+  </section>
+</main>
+
+<!-- ABOUT -->
+<main class="view" id="v-about">
+  <div class="hero" style="padding-bottom:40px">
+    <span class="tag y">About</span>
+    <h1>Hi, I'm <span>Dipin.</span></h1>
+    <div class="about" style="margin-top:30px">
+      <div class="avatar">DN</div>
+      <div>
+        <p>I'm a Software Engineer with 7+ years of experience building production-level Python and C++ software for simulation, automation and developer tooling.</p>
+        <p>I maintain PyMechanical and contribute to the PyAnsys open-source ecosystem, with ownership across testing, releases, CI/CD and documentation. I focus on scalable Python platforms, open-source tooling and reliable customer-facing software.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">C++</span><span class="tag">C#</span><span class="tag">PyMechanical</span><span class="tag">Docker</span><span class="tag">CI/CD</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <h2>Work Experience</h2>
+    <p class="lead">From automotive transmissions to open-source simulation tooling. Tap a role for details.</p>
+    <details class="job" open><summary><div><b>Senior Software Engineer</b><span>Synopsys Inc.</span></div><span class="tag y">2023 – present</span></summary>
+    <ul><li>Architected and maintained PyMechanical, a PyAnsys open-source Python library enabling programmatic access to Ansys Mechanical.</li><li>Engineered Docker-based containerization and Azure DevOps CI/CD pipelines, reducing release cycles by 30% across Windows and Linux platforms.</li><li>Developed unit and integration testing frameworks, increasing automated regression coverage from 70% to 90%.</li><li>Resolved critical production bugs in ANSYS Mechanical core software (C++/C#) and improved customer-facing workflow reliability.</li></ul></details>
+    <details class="job"><summary><div><b>Software Developer Intern</b><span>Ansys Inc.</span></div><span class="tag">2023</span></summary>
+    <ul><li>Contributed ANSYS Mechanical release features with the Linear Dynamics team, supporting production C++/C# development workflows.</li><li>Validated changes through Windows/Linux developer builds, Azure pipelines, and ARM tests before integration.</li><li>Applied COM principles to extend Mechanical interfaces and partnered with test teams to triage defects and document release functionality.</li></ul></details>
+    <details class="job"><summary><div><b>Robotics Research Assistant</b><span>Procter &amp; Gamble</span></div><span class="tag">2021 – 2022</span></summary>
+    <ul><li>Automated fragrance consumption analysis for 600+ air fresheners using robotic batch testing workflows.</li><li>Enabled robot weighing, QR-code computer vision, and validated data uploads to Siemens server workflows.</li><li>Created a Python PyQt GUI to improve customer interaction and standardize test execution.</li></ul></details>
+    <details class="job"><summary><div><b>Systems Engineer</b><span>Tata Consultancy Ltd</span></div><span class="tag">2019 – 2020</span></summary>
+    <ul><li>Earned Design for Six Sigma Black Belt certification by supervising 2 projects as team leader and facilitator.</li><li>Coordinated development of 12 efficiency modules in MASTA software using C++.</li><li>Led a cross-functional team of 4 to automate meshing in SimLab using JavaScript for simulation analysis.</li></ul></details>
+    <details class="job"><summary><div><b>Senior Engineer</b><span>General Motors</span></div><span class="tag">2016 – 2019</span></summary>
+    <ul><li>Automated Abaqus system modeling with VBA scripting, reducing manual effort by 85%.</li><li>Earned 7 recognitions, including Work of Wonder and Pat on the Back, for transmission efficiency optimization.</li></ul></details>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="grid" style="margin-top:22px">
+      <div class="card"><div class="body"><span class="tag y">2021 – 2023</span><h3>M.S. Mechanical Engineering</h3><p>University of Cincinnati<br>GPA 4.0 / 4.0</p></div></div>
+      <div class="card"><div class="body"><span class="tag y">2012 – 2016</span><h3>B.Tech Mechanical Engineering</h3><p>Indian Institute of Technology, Hyderabad<br>GPA 8.24 / 10</p></div></div>
+    </div>
+  </section>
+</main>
+
+<!-- PROJECTS -->
+<main class="view" id="v-projects">
+  <div class="hero" style="padding-bottom:30px">
+    <span class="tag y">Projects</span>
+    <h1>Things I've <span>built.</span></h1>
+    <p>Production tools, open-source libraries, and automation systems from across my career.</p>
+  </div>
+  <section style="border-top:0;padding-top:20px">
+    <div class="chips" id="projectChips"><span class="chip on" data-filter="all">All</span><span class="chip" data-filter="open-source">Open source</span><span class="chip" data-filter="automation">Automation</span><span class="chip" data-filter="robotics">Robotics</span><span class="chip" data-filter="simulation">Simulation</span></div>
+    <div class="grid" id="projectGrid">
+      <div class="card" data-cat="open-source"><div class="thumb" style="--c:#f2c94c">PyMechanical</div><div class="body"><span class="meta">2023 – present · Open source</span><h3>PyMechanical</h3><p>PyAnsys open-source Python library enabling programmatic access to Ansys Mechanical for simulation workflows.</p><div class="tags"><span class="tag">Python</span><span class="tag">gRPC</span><span class="tag">Docker</span></div></div></div>
+      <div class="card" data-cat="automation"><div class="thumb" style="--c:#f4a98a">CI/CD</div><div class="body"><span class="meta">2024 · Automation</span><h3>CI/CD Pipeline Framework</h3><p>Docker-based containerization and Azure DevOps CI/CD pipelines reducing release cycles by 30% across Windows and Linux.</p><div class="tags"><span class="tag">Docker</span><span class="tag">Azure DevOps</span></div></div></div>
+      <div class="card" data-cat="open-source"><div class="thumb" style="--c:#b9d8c2">Testing</div><div class="body"><span class="meta">2024 · Testing</span><h3>Regression Test Suite</h3><p>Unit and integration testing frameworks lifting automated regression coverage from 70% to 90%.</p><div class="tags"><span class="tag">pytest</span><span class="tag">C#</span></div></div></div>
+      <div class="card" data-cat="robotics"><div class="thumb" style="--c:#c9d4f0">PyQt GUI</div><div class="body"><span class="meta">2022 · Robotics</span><h3>Fragrance Analysis GUI</h3><p>Python PyQt interface automating robotic batch testing for 600+ air fresheners with QR-code computer vision.</p><div class="tags"><span class="tag">PyQt</span><span class="tag">OpenCV</span></div></div></div>
+      <div class="card" data-cat="simulation"><div class="thumb" style="--c:#f2c94c">SimLab</div><div class="body"><span class="meta">2020 · Simulation</span><h3>SimLab Meshing Automation</h3><p>JavaScript automation for repeatable meshing workflows, led by a cross-functional team of 4.</p><div class="tags"><span class="tag">JavaScript</span><span class="tag">SimLab</span></div></div></div>
+      <div class="card" data-cat="automation"><div class="thumb" style="--c:#f4a98a">Abaqus</div><div class="body"><span class="meta">2018 · Automation</span><h3>Abaqus Modeling Scripts</h3><p>VBA tooling that automated system modeling in Abaqus, cutting manual effort by 85%.</p><div class="tags"><span class="tag">VBA</span><span class="tag">Abaqus</span></div></div></div>
+    </div>
+  </section>
+</main>
+
+<!-- BLOG -->
+<main class="view" id="v-blog">
+  <div class="hero" style="padding-bottom:30px">
+    <span class="tag y">Blog</span>
+    <h1>Notes &amp; <span>writing.</span></h1>
+    <p>Thoughts on Python tooling, CI/CD, open-source maintenance, and engineering career transitions.</p>
+  </div>
+  <section style="border-top:0;padding-top:20px">
+    <div class="grid">
+      <div class="card"><div class="body"><span class="meta">Coming soon</span><h3>Blog posts are on the way</h3><p>Stay tuned — writing is in progress. Topics will include Python library maintenance, containerized builds, and lessons from open source.</p></div></div>
+    </div>
+  </section>
+</main>
+
+<!-- CONTACT -->
+<main class="view" id="v-contact">
+  <div class="hero">
+    <span class="tag y">Contact</span>
+    <h1>Let's <span>connect.</span></h1>
+    <p>Open to interesting problems in simulation, Python tooling and open source.</p>
+    <div class="ctas">
+      <a class="btn pri" href="mailto:dipinknair619@gmail.com"><small>Email</small><b>dipinknair619@gmail.com</b></a>
+      <a class="btn" href="https://github.com/dipinknair" target="_blank" rel="noopener noreferrer"><small>Code</small><b>GitHub →</b></a>
+      <a class="btn" href="https://linkedin.com/in/dipinknair619" target="_blank" rel="noopener noreferrer"><small>Network</small><b>LinkedIn →</b></a>
+      <a class="btn" href="assets/documents/resume.pdf" download="Dipin_Nair_Resume.pdf"><small>Resume</small><b>Download PDF →</b></a>
+    </div>
+    <p class="note">Based in Austin, TX.</p>
+  </div>
+</main>
+
+<footer><span>© 2026 Dipin Nair</span><span>Plain HTML &amp; CSS. No frameworks, no lock-in.</span></footer>
+</div>
+<script>
+(function(){
+  var views=['home','about','projects','blog','contact'];
+  function show(){
+    var h=(location.hash||'#home').slice(1);
+    if(views.indexOf(h)<0)h='home';
+    views.forEach(function(v){
+      document.getElementById('v-'+v).classList.toggle('on',v===h);
+    });
+    var links=document.querySelectorAll('#nav a');
+    for(var i=0;i<links.length;i++)links[i].classList.toggle('on',links[i].dataset.v===h);
+    window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange',show);
+  show();
+
+  // Project filter chips
+  var chips=document.querySelectorAll('#projectChips .chip');
+  var cards=document.querySelectorAll('#projectGrid .card');
+  chips.forEach(function(chip){
+    chip.addEventListener('click',function(){
+      chips.forEach(function(c){c.classList.remove('on')});
+      chip.classList.add('on');
+      var f=chip.dataset.filter;
+      cards.forEach(function(card){
+        card.style.display=(f==='all'||card.dataset.cat===f)?'':'none';
+      });
+    });
+  });
+})();
+</script>
 </body>
 </html>
