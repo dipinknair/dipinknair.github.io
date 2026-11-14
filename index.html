@@ -7,12 +7,12 @@
 <meta name="description" content="Dipin Nair — Software Engineer with 7+ years building production Python & C++ software for simulation, automation, and developer tooling.">
 <title>Dipin Nair — Software Engineer</title>
 <style>
-:root{color-scheme:light;--bg:#f5efe0;--card:#fffaf0;--ink:#1d1a14;--mute:#5e574a;--acc:#d9481c;--hl:#f2c94c;--line:#1d1a14;
+:root{color-scheme:light;--bg:#f5efe0;--card:#fffaf0;--ink:#1d1a14;--mute:#5e574a;--acc:#d9481c;--hl:#f2c94c;--line:#1d1a14;--logo:brightness(0);
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media(prefers-color-scheme:dark){
-:root:not([data-theme="light"]){color-scheme:dark;--bg:#0f0d0a;--card:#1a1815;--ink:#f5efe0;--mute:#b8aea0;--acc:#ff8844;--hl:#6d5d1a;--line:#e8dcc8}
+:root:not([data-theme="light"]){color-scheme:dark;--bg:#0f0d0a;--card:#1a1815;--ink:#f5efe0;--mute:#b8aea0;--acc:#ff8844;--hl:#6d5d1a;--line:#e8dcc8;--logo:brightness(0) invert(1)}
 }
-:root[data-theme="dark"]{color-scheme:dark;--bg:#0f0d0a;--card:#1a1815;--ink:#f5efe0;--mute:#b8aea0;--acc:#ff8844;--hl:#6d5d1a;--line:#e8dcc8}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0f0d0a;--card:#1a1815;--ink:#f5efe0;--mute:#b8aea0;--acc:#ff8844;--hl:#6d5d1a;--line:#e8dcc8;--logo:brightness(0) invert(1)}
 *{box-sizing:border-box}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Georgia,"Times New Roman",serif}
@@ -74,6 +74,8 @@ repeating-linear-gradient(45deg,transparent 0 12px,rgba(29,26,20,.07) 12px 14px)
 .job summary::-webkit-details-marker{display:none}
 .job summary b{font-family:ui-monospace,Menlo,monospace;font-size:17px;display:block}
 .job summary span{color:var(--mute);font-size:15px}
+.co{display:flex;align-items:center;gap:16px}
+.co img{width:72px;height:32px;object-fit:contain;flex:none;filter:var(--logo)}
 .job[open] summary{border-bottom:2px solid var(--line)}
 .job ul{margin:0;padding:16px 22px 18px 42px;color:var(--mute);font-size:15.5px}
 .job li{margin-bottom:7px}
@@ -85,7 +87,7 @@ repeating-linear-gradient(45deg,transparent 0 12px,rgba(29,26,20,.07) 12px 14px)
 .chip{font:13px ui-monospace,Menlo,monospace;border:2px solid var(--line);padding:4px 14px;background:var(--card);cursor:pointer}
 .chip.on{background:var(--ink);color:var(--bg)}
 .note{font-size:13px;color:var(--mute);margin-top:14px}
-footer{border-top:2px solid var(--line);padding:26px 0 40px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:14px;color:var(--mute)}
+footer{border-top:2px solid var(--line);padding:26px 0 40px;text-align:right;font-size:14px;color:var(--mute)}
 </style>
 </head>
 <body>
@@ -109,18 +111,18 @@ footer{border-top:2px solid var(--line);padding:26px 0 40px;display:flex;justify
   <section>
     <div class="sh"><h2>Featured Projects</h2><a href="#projects">All projects →</a></div>
     <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    <div class="grid">
-      <a class="card" href="#projects"><div class="thumb" style="--c:#f2c94c">PyMechanical</div><div class="body"><span class="meta">2023 – present · Open source</span><h3>PyMechanical</h3><p>PyAnsys open-source Python library enabling programmatic access to Ansys Mechanical for simulation workflows.</p><div class="tags"><span class="tag">Python</span><span class="tag">gRPC</span><span class="tag">Docker</span></div></div></a>
-      <a class="card" href="#projects"><div class="thumb" style="--c:#f4a98a">Lorem ipsum</div><div class="body"><span class="meta">Lorem ipsum</span><h3>Lorem ipsum</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><div class="tags"><span class="tag">Lorem ipsum</span></div></div></a>
-      <a class="card" href="#projects"><div class="thumb" style="--c:#b9d8c2">Lorem ipsum</div><div class="body"><span class="meta">Lorem ipsum</span><h3>Lorem ipsum</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><div class="tags"><span class="tag">Lorem ipsum</span></div></div></a>
+    <div>
+      <a class="post" href="#projects"><span class="meta">2023 – present</span><div><h3>PyMechanical</h3><p>PyAnsys open-source Python library enabling programmatic access to Ansys Mechanical for simulation workflows.</p></div><span class="tag">Open source</span></a>
+      <a class="post" href="#projects"><span class="meta">Lorem ipsum</span><div><h3>Lorem ipsum</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div><span class="tag">Lorem ipsum</span></a>
+      <a class="post" href="#projects"><span class="meta">Lorem ipsum</span><div><h3>Lorem ipsum</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div><span class="tag">Lorem ipsum</span></a>
     </div>
   </section>
 
   <section>
     <div class="sh"><h2>Latest from the Blog</h2><a href="#blog">All posts →</a></div>
     <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    <div class="grid">
-      <a class="card" href="#blog"><div class="body"><span class="meta">Lorem ipsum</span><h3>Lorem ipsum</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div></a>
+    <div>
+      <a class="post" href="#blog"><time class="meta" datetime="2026-11-13">Nov 13, 2026</time><div><h3>Lorem ipsum</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div><span class="tag">Lorem ipsum</span></a>
     </div>
   </section>
 </main>
@@ -143,15 +145,15 @@ footer{border-top:2px solid var(--line);padding:26px 0 40px;display:flex;justify
   <section>
     <h2>Work Experience</h2>
     <p class="lead">From automotive transmissions to open-source simulation tooling. Tap a role for details.</p>
-    <details class="job" open><summary><div><b>Senior Software Engineer</b><span>Synopsys Inc.</span></div><span class="tag y">2023 – present</span></summary>
+    <details class="job" open><summary><div class="co"><img src="assets/images/logos/synopsys.svg" alt=""><div><b>Senior Software Engineer</b><span>Synopsys Inc.</span></div></div><span class="tag y">2023 – present</span></summary>
     <ul><li>Architected and maintained PyMechanical, a PyAnsys open-source Python library enabling programmatic access to Ansys Mechanical.</li><li>Engineered Docker-based containerization and Azure DevOps CI/CD pipelines, reducing release cycles by 30% across Windows and Linux platforms.</li><li>Developed unit and integration testing frameworks, increasing automated regression coverage from 70% to 90%.</li><li>Resolved critical production bugs in ANSYS Mechanical core software (C++/C#) and improved customer-facing workflow reliability.</li></ul></details>
-    <details class="job"><summary><div><b>Software Developer Intern</b><span>Ansys Inc.</span></div><span class="tag">2023</span></summary>
+    <details class="job"><summary><div class="co"><img src="assets/images/logos/ansys.svg" alt=""><div><b>Software Developer Intern</b><span>Ansys Inc.</span></div></div><span class="tag">2023</span></summary>
     <ul><li>Contributed ANSYS Mechanical release features with the Linear Dynamics team, supporting production C++/C# development workflows.</li><li>Validated changes through Windows/Linux developer builds, Azure pipelines, and ARM tests before integration.</li><li>Applied COM principles to extend Mechanical interfaces and partnered with test teams to triage defects and document release functionality.</li></ul></details>
-    <details class="job"><summary><div><b>Robotics Research Assistant</b><span>Procter &amp; Gamble</span></div><span class="tag">2021 – 2022</span></summary>
+    <details class="job"><summary><div class="co"><img src="assets/images/logos/pg.svg" alt=""><div><b>Robotics Research Assistant</b><span>Procter &amp; Gamble</span></div></div><span class="tag">2021 – 2022</span></summary>
     <ul><li>Automated fragrance consumption analysis for 600+ air fresheners using robotic batch testing workflows.</li><li>Enabled robot weighing, QR-code computer vision, and validated data uploads to Siemens server workflows.</li><li>Created a Python PyQt GUI to improve customer interaction and standardize test execution.</li></ul></details>
-    <details class="job"><summary><div><b>Systems Engineer</b><span>Tata Consultancy Ltd</span></div><span class="tag">2019 – 2020</span></summary>
+    <details class="job"><summary><div class="co"><img src="assets/images/logos/tcs.svg" alt=""><div><b>Systems Engineer</b><span>Tata Consultancy Ltd</span></div></div><span class="tag">2019 – 2020</span></summary>
     <ul><li>Earned Design for Six Sigma Black Belt certification by supervising 2 projects as team leader and facilitator.</li><li>Coordinated development of 12 efficiency modules in MASTA software using C++.</li><li>Led a cross-functional team of 4 to automate meshing in SimLab using JavaScript for simulation analysis.</li></ul></details>
-    <details class="job"><summary><div><b>Senior Engineer</b><span>General Motors</span></div><span class="tag">2016 – 2019</span></summary>
+    <details class="job"><summary><div class="co"><img src="assets/images/logos/gm.svg" alt=""><div><b>Senior Engineer</b><span>General Motors</span></div></div><span class="tag">2016 – 2019</span></summary>
     <ul><li>Automated Abaqus system modeling with VBA scripting, reducing manual effort by 85%.</li><li>Earned 7 recognitions, including Work of Wonder and Pat on the Back, for transmission efficiency optimization.</li></ul></details>
   </section>
 
@@ -193,7 +195,7 @@ footer{border-top:2px solid var(--line);padding:26px 0 40px;display:flex;justify
   </div>
   <section style="border-top:0;padding-top:20px">
     <div class="grid">
-      <div class="card"><div class="body"><span class="meta">Lorem ipsum</span><h3>Lorem ipsum</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div></div>
+      <div class="card"><div class="body"><time class="meta" datetime="2026-11-13">Nov 13, 2026</time><h3>Lorem ipsum</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div></div>
     </div>
   </section>
 </main>
