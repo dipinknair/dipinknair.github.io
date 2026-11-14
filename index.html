@@ -79,10 +79,12 @@ repeating-linear-gradient(45deg,transparent 0 12px,rgba(29,26,20,.07) 12px 14px)
 .job[open] summary{border-bottom:2px solid var(--line)}
 .job ul{margin:0;padding:16px 22px 18px 42px;color:var(--mute);font-size:15.5px}
 .job li{margin-bottom:7px}
-.post{display:grid;grid-template-columns:130px 1fr auto;gap:18px;align-items:center;border:2px solid var(--line);background:var(--card);padding:18px 22px;margin-bottom:18px;box-shadow:5px 5px 0 var(--line);text-decoration:none;transition:.12s}
-.post:hover{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--line)}
+.post{display:grid;grid-template-columns:130px 1fr auto;gap:18px;align-items:center;padding:16px 0;border-bottom:1.5px solid var(--line);text-decoration:none}
+.post.nodate{grid-template-columns:1fr auto}
+.post:first-child{border-top:1.5px solid var(--line)}
+.post:hover h3{color:var(--acc)}
 .post h3{margin:0 0 4px;font-size:18px}.post p{margin:0;color:var(--mute);font-size:15.5px}
-@media(max-width:640px){.post{grid-template-columns:1fr;gap:8px}}
+@media(max-width:640px){.post,.post.nodate{grid-template-columns:1fr;gap:6px}.post .tag{justify-self:start}}
 .chips{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
 .chip{font:13px ui-monospace,Menlo,monospace;border:2px solid var(--line);padding:4px 14px;background:var(--card);cursor:pointer}
 .chip.on{background:var(--ink);color:var(--bg)}
@@ -112,9 +114,9 @@ footer{border-top:2px solid var(--line);padding:26px 0 40px;text-align:right;fon
     <div class="sh"><h2>Featured Projects</h2><a href="#projects">All projects →</a></div>
     <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     <div>
-      <a class="post" href="#projects"><span class="meta">2023 – present</span><div><h3>PyMechanical</h3><p>PyAnsys open-source Python library enabling programmatic access to Ansys Mechanical for simulation workflows.</p></div><span class="tag">Open source</span></a>
-      <a class="post" href="#projects"><span class="meta">Lorem ipsum</span><div><h3>Lorem ipsum</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div><span class="tag">Lorem ipsum</span></a>
-      <a class="post" href="#projects"><span class="meta">Lorem ipsum</span><div><h3>Lorem ipsum</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div><span class="tag">Lorem ipsum</span></a>
+      <a class="post nodate" href="#projects"><div><h3>PyMechanical</h3><p>PyAnsys open-source Python library enabling programmatic access to Ansys Mechanical for simulation workflows.</p></div><span class="tag">Open source</span></a>
+      <a class="post nodate" href="#projects"><div><h3>Lorem ipsum</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div><span class="tag">Lorem ipsum</span></a>
+      <a class="post nodate" href="#projects"><div><h3>Lorem ipsum</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div><span class="tag">Lorem ipsum</span></a>
     </div>
   </section>
 
@@ -176,7 +178,7 @@ footer{border-top:2px solid var(--line);padding:26px 0 40px;text-align:right;fon
   <section style="border-top:0;padding-top:20px">
     <div class="chips" id="projectChips"><span class="chip on" data-filter="all">All</span><span class="chip" data-filter="pymechanical">PyMechanical</span><span class="chip" data-filter="ipsum">Lorem ipsum</span></div>
     <div class="grid" id="projectGrid">
-      <div class="card" data-cat="pymechanical"><div class="thumb" style="--c:#f2c94c">PyMechanical</div><div class="body"><span class="meta">2023 – present · Open source</span><h3>PyMechanical</h3><p>PyAnsys open-source Python library enabling programmatic access to Ansys Mechanical for simulation workflows.</p><div class="tags"><span class="tag">Python</span><span class="tag">gRPC</span><span class="tag">Docker</span></div></div></div>
+      <div class="card" data-cat="pymechanical"><div class="thumb" style="--c:#f2c94c">PyMechanical</div><div class="body"><span class="meta">Open source</span><h3>PyMechanical</h3><p>PyAnsys open-source Python library enabling programmatic access to Ansys Mechanical for simulation workflows.</p><div class="tags"><span class="tag">Python</span><span class="tag">gRPC</span><span class="tag">Docker</span></div></div></div>
       <div class="card" data-cat="ipsum"><div class="thumb" style="--c:#f4a98a">Lorem ipsum</div><div class="body"><span class="meta">Lorem ipsum</span><h3>Lorem ipsum</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><div class="tags"><span class="tag">Lorem ipsum</span></div></div></div>
       <div class="card" data-cat="ipsum"><div class="thumb" style="--c:#b9d8c2">Lorem ipsum</div><div class="body"><span class="meta">Lorem ipsum</span><h3>Lorem ipsum</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><div class="tags"><span class="tag">Lorem ipsum</span></div></div></div>
       <div class="card" data-cat="ipsum"><div class="thumb" style="--c:#c9d4f0">Lorem ipsum</div><div class="body"><span class="meta">Lorem ipsum</span><h3>Lorem ipsum</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><div class="tags"><span class="tag">Lorem ipsum</span></div></div></div>
