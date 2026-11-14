@@ -97,6 +97,9 @@ repeating-linear-gradient(45deg,transparent 0 12px,rgba(29,26,20,.07) 12px 14px)
 .article h3{font-size:16px;margin:24px 0 6px}
 .article p,.article li{margin:0 0 14px}
 .article ul{padding-left:22px}
+.article .does{list-style:none;padding:0}
+.does li{display:flex;gap:16px;align-items:flex-start}
+.does img{flex:none;margin-top:2px;filter:var(--logo)}
 .article figure{margin:30px 0}
 .article figure img{display:block;width:100%;height:auto;border:2px solid var(--line);box-shadow:5px 5px 0 var(--line)}
 .article figcaption{font-size:13px;color:var(--mute);margin-top:12px}
@@ -136,7 +139,7 @@ footer{border-top:2px solid var(--line);padding:26px 0 40px;text-align:right;fon
 
   <section>
     <div class="sh"><h2>Latest from the Blog</h2><a href="#blog">All posts →</a></div>
-    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p class="lead">Notes from my home lab, side projects, and things I've learned along the way.</p>
     <div>
       <a class="post" href="#jetson-nano-home-server"><time class="meta" datetime="2026-11-13">Nov 13, 2026</time><div><h3>How I Turned a Jetson Nano Into a Home Server</h3><p>Network-wide ad blocking, a private cloud, and remote access, all from a ~5W board on my desk.</p></div><span class="tag">Home lab</span></a>
     </div>
@@ -207,7 +210,7 @@ footer{border-top:2px solid var(--line);padding:26px 0 40px;text-align:right;fon
   <div class="hero" style="padding-bottom:30px">
     <span class="tag y">Blog</span>
     <h1>Notes &amp; <span>writing.</span></h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Notes from my home lab, side projects, and things I've learned along the way.</p>
   </div>
   <section style="border-top:0;padding-top:20px">
     <div class="grid">
@@ -231,9 +234,9 @@ footer{border-top:2px solid var(--line);padding:26px 0 40px;text-align:right;fon
 
     <h2>What it does</h2>
     <ul class="does">
-      <li><b>Blocks ads everywhere.</b> Pi-hole filters ads and trackers at the DNS level, so every device on the network is covered, including phones, smart TVs, and consoles, with nothing to install on them.</li>
-      <li><b>Hosts my files.</b> Nextcloud gives me a private Google Drive with a web UI and desktop and mobile sync, backed by a 500GB SSD.</li>
-      <li><b>Works from anywhere.</b> Tailscale connects my devices over an encrypted WireGuard VPN, so all of it is reachable when I'm away from home.</li>
+      <li><img src="assets/images/logos/pihole.svg" alt="" width="28" height="28"><div><b>Blocks ads everywhere.</b> Pi-hole filters ads and trackers at the DNS level, so every device on the network is covered, including phones, smart TVs, and consoles, with nothing to install on them.</div></li>
+      <li><img src="assets/images/logos/nextcloud.svg" alt="" width="28" height="28"><div><b>Hosts my files.</b> Nextcloud gives me a private Google Drive with a web UI and desktop and mobile sync, backed by a 500GB SSD.</div></li>
+      <li><img src="assets/images/logos/tailscale.svg" alt="" width="28" height="28"><div><b>Works from anywhere.</b> Tailscale connects my devices over an encrypted WireGuard VPN, so all of it is reachable when I'm away from home.</div></li>
     </ul>
 
     <h2>The hardware</h2>
@@ -247,11 +250,6 @@ footer{border-top:2px solid var(--line);padding:26px 0 40px;text-align:right;fon
       <tr><th>Network</th><td>Gigabit Ethernet, wired for reliability</td></tr>
       <tr><th>Power draw</th><td>~5W, running 24/7</td></tr>
     </table>
-
-    <figure>
-      <img src="assets/images/blog/jetson-nano-ports.jpg" alt="Front edge of the Jetson Nano showing the barrel power jack, DisplayPort, HDMI, four USB 3.0 ports, Ethernet, and micro-USB" width="1280" height="720" loading="lazy">
-      <figcaption>Four USB 3.0 ports and Gigabit Ethernet: all a small server needs. Photo: <a href="https://commons.wikimedia.org/wiki/File:NVIDIA_Jetson_Nano_Developer_Kit_(46967518914).jpg" target="_blank" rel="noopener noreferrer">Thomas Amberg</a>, CC BY-SA 2.0.</figcaption>
-    </figure>
 
     <h2>How it fits together</h2>
     <h3>Storage first</h3>
