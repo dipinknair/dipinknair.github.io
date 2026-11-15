@@ -27,10 +27,10 @@
 header { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; gap: 12px; flex-wrap: wrap; }
 nav { display: flex; align-items: center; gap: 6px; font: 14px ui-monospace, "SF Mono", Menlo, Consolas, monospace; flex-wrap: wrap; }
 /* One shared height keeps links, search box and theme button on the same baseline. */
-nav a, .search input, .theme-toggle { box-sizing: border-box; height: 36px; line-height: 1; }
-nav a { display: inline-flex; align-items: center; text-decoration: none; padding: 0 12px; border: 2px solid transparent; }
-nav a:hover { border-color: var(--line); }
-nav a.on, nav a[aria-current="page"] { border-color: var(--line); background: var(--hl, var(--highlight)); box-shadow: 3px 3px 0 var(--line); }
+#nav > a, .search input, .theme-toggle { box-sizing: border-box; height: 36px; line-height: 1; }
+#nav > a { display: inline-flex; align-items: center; text-decoration: none; padding: 0 12px; border: 2px solid transparent; }
+#nav > a:hover { border-color: var(--line); }
+#nav > a.on, #nav > a[aria-current="page"] { border-color: var(--line); background: var(--hl, var(--highlight)); box-shadow: 3px 3px 0 var(--line); }
 .theme-toggle { font: 14px ui-monospace, "SF Mono", Menlo, Consolas, monospace; padding: 0 12px; border: 2px solid var(--line); background: var(--card); color: var(--ink); cursor: pointer; transition: .12s; display: flex; align-items: center; justify-content: center; gap: 6px; }
 .theme-toggle:hover { transform: scale(1.05); background: var(--card); color: var(--ink); }
 .theme-toggle:active { transform: scale(.95); }

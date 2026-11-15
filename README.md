@@ -11,6 +11,7 @@ python scripts\build_search_index.py
 ```
 
 Run the navigation and search regression checks with `python -m unittest discover -s tests`.
+GitHub Actions runs the same checks on every push to `main` and on pull requests; a stale search index fails the run.
 
 To setup the project on your local machine:
 
