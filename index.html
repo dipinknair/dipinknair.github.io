@@ -122,12 +122,15 @@ repeating-linear-gradient(45deg,transparent 0 12px,rgba(29,26,20,.07) 12px 14px)
 .article code{font:14px ui-monospace,Menlo,monospace;background:var(--card);border:1px solid var(--line);padding:1px 5px}
 footer{border-top:2px solid var(--line);padding:26px 0 40px;text-align:right;font-size:14px;color:var(--mute)}
 </style>
+<link rel="stylesheet" href="assets/css/header.css">
+<script src="assets/js/search-index.js" defer></script>
+<script src="assets/js/site.js" defer></script>
 </head>
 <body>
 <div class="wrap">
 <header>
   <a class="logo" href="#home">Dipin</a>
-  <nav id="nav"><a href="#home" data-v="home">Home</a><a href="#about" data-v="about">About</a><a href="#projects" data-v="projects">Projects</a><a href="#blog" data-v="blog">Blog</a><a href="#contact" data-v="contact">Contact</a><div class="search"><input id="q" type="search" placeholder="Search…" aria-label="Search the site" autocomplete="off"><ul id="results" hidden></ul></div><button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch theme"><svg id="moonIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg id="sunIcon" hidden width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button></nav>
+  <nav id="nav" aria-label="Main navigation"><a href="#home" data-v="home">Home</a><a href="#about" data-v="about">About</a><a href="projects/index.html" data-v="projects">Projects</a><a href="blog/index.html" data-v="blog">Blog</a><a href="#contact" data-v="contact">Contact</a><div class="search"><input id="q" type="search" placeholder="Search…" aria-label="Search the site" autocomplete="off"><ul id="results" hidden></ul></div><button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch theme"><svg id="moonIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg id="sunIcon" hidden width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button></nav>
 </header>
 
 <!-- HOME -->
@@ -136,27 +139,27 @@ footer{border-top:2px solid var(--line);padding:26px 0 40px;text-align:right;fon
     <span class="tag y">Austin, TX · Senior Software Engineer</span>
     <p>7+ years building production software for simulation, automation and developer tooling. I maintain PyMechanical and contribute to the PyAnsys open-source ecosystem.</p>
     <div class="ctas">
-      <a class="btn pri" href="#projects"><small>01 / Selected work</small><b>See my projects →</b></a>
+      <a class="btn pri" href="projects/index.html"><small>01 / Selected work</small><b>See my projects →</b></a>
       <a class="btn" href="#about"><small>02 / The story so far</small><b>About me →</b></a>
     </div>
   </div>
 
   <section>
-    <div class="sh"><h2>Featured Projects</h2><a href="#projects">All projects →</a></div>
+    <div class="sh"><h2>Featured Projects</h2><a href="projects/index.html">All projects →</a></div>
     <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     <div>
-      <a class="post nodate" href="#projects"><div><h3>PyMechanical</h3><p>PyAnsys open-source Python library enabling programmatic access to Ansys Mechanical for simulation workflows.</p></div><span class="tag">Open source</span></a>
-      <a class="post nodate" href="#projects"><div><h3>Lorem ipsum</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div><span class="tag">Lorem ipsum</span></a>
-      <a class="post nodate" href="#projects"><div><h3>Lorem ipsum</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div><span class="tag">Lorem ipsum</span></a>
+      <a class="post nodate" href="projects/index.html"><div><h3>PyMechanical</h3><p>PyAnsys open-source Python library enabling programmatic access to Ansys Mechanical for simulation workflows.</p></div><span class="tag">Open source</span></a>
+      <a class="post nodate" href="projects/index.html"><div><h3>Lorem ipsum</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div><span class="tag">Lorem ipsum</span></a>
+      <a class="post nodate" href="projects/index.html"><div><h3>Lorem ipsum</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div><span class="tag">Lorem ipsum</span></a>
     </div>
   </section>
 
   <section>
-    <div class="sh"><h2>Latest from the Blog</h2><a href="#blog">All posts →</a></div>
+    <div class="sh"><h2>Latest from the Blog</h2><a href="blog/index.html">All posts →</a></div>
     <p class="lead">Notes from my home lab, side projects, and things I've learned along the way.</p>
     <div>
-      <a class="post" href="#obsidian-git-sync"><time class="meta" datetime="2026-11-13">Nov 13, 2026</time><div><h3>Sync Obsidian Across Every Device for Free with GitHub</h3><p>One private Git repo keeps my notes in sync on PC and iPhone, with no subscription.</p></div><span class="tag">Productivity</span></a>
-      <a class="post" href="#jetson-nano-home-server"><time class="meta" datetime="2026-11-13">Nov 13, 2026</time><div><h3>How I Turned a Jetson Nano Into a Home Server</h3><p>Network-wide ad blocking, a private cloud, and remote access, all from a ~5W board on my desk.</p></div><span class="tag">Home lab</span></a>
+      <a class="post" href="blog/obsidian-git-sync.html"><time class="meta" datetime="2026-11-13">Nov 13, 2026</time><div><h3>Sync Obsidian Across Every Device for Free with GitHub</h3><p>One private Git repo keeps my notes in sync on PC and iPhone, with no subscription.</p></div><span class="tag">Productivity</span></a>
+      <a class="post" href="blog/jetson-nano-home-server.html"><time class="meta" datetime="2026-11-13">Nov 13, 2026</time><div><h3>How I Turned a Jetson Nano Into a Home Server</h3><p>Network-wide ad blocking, a private cloud, and remote access, all from a ~5W board on my desk.</p></div><span class="tag">Home lab</span></a>
     </div>
   </section>
 </main>
@@ -200,158 +203,6 @@ footer{border-top:2px solid var(--line);padding:26px 0 40px;text-align:right;fon
   </section>
 </main>
 
-<!-- PROJECTS -->
-<main class="view" id="v-projects">
-  <div class="hero" style="padding-bottom:30px">
-    <span class="tag y">Projects</span>
-    <h1>Things I've <span>built.</span></h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  </div>
-  <section style="border-top:0;padding-top:20px">
-    <div class="chips" id="projectChips"><span class="chip on" data-filter="all">All</span><span class="chip" data-filter="pymechanical">PyMechanical</span><span class="chip" data-filter="ipsum">Lorem ipsum</span></div>
-    <div class="grid" id="projectGrid">
-      <div class="card" data-cat="pymechanical"><div class="thumb" style="--c:#f2c94c">PyMechanical</div><div class="body"><span class="meta">Open source</span><h3>PyMechanical</h3><p>PyAnsys open-source Python library enabling programmatic access to Ansys Mechanical for simulation workflows.</p><div class="tags"><span class="tag">Python</span><span class="tag">gRPC</span><span class="tag">Docker</span></div></div></div>
-      <div class="card" data-cat="ipsum"><div class="thumb" style="--c:#f4a98a">Lorem ipsum</div><div class="body"><span class="meta">Lorem ipsum</span><h3>Lorem ipsum</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><div class="tags"><span class="tag">Lorem ipsum</span></div></div></div>
-      <div class="card" data-cat="ipsum"><div class="thumb" style="--c:#b9d8c2">Lorem ipsum</div><div class="body"><span class="meta">Lorem ipsum</span><h3>Lorem ipsum</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><div class="tags"><span class="tag">Lorem ipsum</span></div></div></div>
-      <div class="card" data-cat="ipsum"><div class="thumb" style="--c:#c9d4f0">Lorem ipsum</div><div class="body"><span class="meta">Lorem ipsum</span><h3>Lorem ipsum</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><div class="tags"><span class="tag">Lorem ipsum</span></div></div></div>
-      <div class="card" data-cat="ipsum"><div class="thumb" style="--c:#f2c94c">Lorem ipsum</div><div class="body"><span class="meta">Lorem ipsum</span><h3>Lorem ipsum</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><div class="tags"><span class="tag">Lorem ipsum</span></div></div></div>
-      <div class="card" data-cat="ipsum"><div class="thumb" style="--c:#f4a98a">Lorem ipsum</div><div class="body"><span class="meta">Lorem ipsum</span><h3>Lorem ipsum</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><div class="tags"><span class="tag">Lorem ipsum</span></div></div></div>
-    </div>
-  </section>
-</main>
-
-<!-- BLOG -->
-<main class="view" id="v-blog">
-  <div class="hero" style="padding-bottom:30px">
-    <span class="tag y">Blog</span>
-    <h1>Notes &amp; <span>writing.</span></h1>
-    <p>Notes from my home lab, side projects, and things I've learned along the way.</p>
-  </div>
-  <section style="border-top:0;padding-top:20px">
-    <div class="grid">
-      <a class="card" href="#obsidian-git-sync"><div class="body"><time class="meta" datetime="2026-11-13">Nov 13, 2026</time><h3>Sync Obsidian Across Every Device for Free with GitHub</h3><p>One private Git repo keeps my notes in sync on PC and iPhone, with no subscription.</p></div></a>
-      <a class="card" href="#jetson-nano-home-server"><div class="body"><time class="meta" datetime="2026-11-13">Nov 13, 2026</time><h3>How I Turned a Jetson Nano Into a Home Server</h3><p>Network-wide ad blocking, a private cloud, and remote access, all from a ~5W board on my desk.</p></div></a>
-    </div>
-  </section>
-</main>
-
-<!-- POST: Obsidian Git sync -->
-<main class="view" id="v-obsidian-git-sync" data-nav="blog">
-  <article class="article">
-    <a class="back" href="#blog">← All posts</a>
-    <p class="meta"><time datetime="2026-11-13">Nov 13, 2026</time> · Productivity</p>
-    <h1>Sync Obsidian Across Every Device for Free with GitHub</h1>
-    <p class="dek">My notes stay in sync between my PC and iPhone with no subscription, just a private GitHub repo, Git, and one Obsidian plugin.</p>
-
-    <h2>The idea</h2>
-    <p>An Obsidian vault is just a folder of Markdown files, and Git is very good at syncing folders. Put the vault in a private GitHub repo and every device can pull and push the same notes. As a bonus, you get a full version history of every note.</p>
-
-    <h2>What you need</h2>
-    <ul class="does">
-      <li><img src="assets/images/logos/obsidian.svg" alt="" width="28" height="28"><div><b>Obsidian</b> on your PC and iPhone, plus the community plugin <b>Obsidian Git</b>.</div></li>
-      <li><img src="assets/images/logos/github.svg" alt="" width="28" height="28"><div><b>GitHub</b>: a free private repository for the vault and a personal access token.</div></li>
-      <li><img src="assets/images/logos/git.svg" alt="" width="28" height="28"><div><b>Git</b> on your PC, and <b>iSH</b> on your iPhone, a free app that gives you a small Linux shell with Git.</div></li>
-    </ul>
-
-    <h2>How I set it up</h2>
-    <h3>1. Create the repo</h3>
-    <p>Create a new <b>private</b> repository on GitHub. Keep it private, since it will hold your personal notes.</p>
-
-    <h3>2. Set up the PC</h3>
-    <p>Clone the repo to your computer and open that folder in Obsidian as a vault. If you already have notes, move them into the folder, then commit and push them.</p>
-
-    <h3>3. Clone it on the iPhone with iSH</h3>
-    <p>Install <b>iSH</b> from the App Store, install Git inside it with <code>apk add git</code>, and clone the repo with <code>git clone</code>. When asked for a password, use your GitHub token, not your account password.</p>
-
-    <h3>4. Move it into Obsidian's folder</h3>
-    <p>Obsidian on iOS only sees vaults inside its own folder, and that folder doesn't exist until you create a vault. So:</p>
-    <ul>
-      <li>Create a throwaway test vault in Obsidian. This creates <b>On My iPhone › Obsidian</b> in the Files app.</li>
-      <li>In the Files app, open the <b>iSH</b> location, find the cloned repo folder, and copy it into <b>On My iPhone › Obsidian</b>, next to the test vault.</li>
-      <li>Reopen Obsidian. The repo now appears as a vault. Open it and delete the test vault.</li>
-    </ul>
-
-    <h3>5. Connect the Git plugin</h3>
-    <p>Install <b>Obsidian Git</b> from Community plugins on both devices. On the iPhone, enter your GitHub username and token in the plugin's settings. The PC uses your computer's existing Git login.</p>
-
-    <h3>6. Voilà</h3>
-    <p>Write anywhere, run <b>Commit and sync</b>, and your notes appear everywhere. I also turn on automatic pull at startup and a periodic auto-sync, so it mostly runs on its own.</p>
-
-    <h2>Tips</h2>
-    <ul>
-      <li><b>Scope the token.</b> Use a fine-grained GitHub token that can only read and write this one repository.</li>
-      <li><b>Pull before you write.</b> Syncing when you switch devices avoids most merge conflicts.</li>
-      <li><b>Ignore workspace files.</b> Obsidian rewrites <code>.obsidian/workspace*.json</code> constantly. Adding them to <code>.gitignore</code> prevents pointless conflicts between devices.</li>
-    </ul>
-
-    <h2>The verdict</h2>
-    <p>Free, private, and versioned: my notes follow me across devices, and I own every file. Setup takes about 20 minutes, and after that sync is a single tap.</p>
-  </article>
-</main>
-
-<!-- POST: Jetson Nano home server -->
-<main class="view" id="v-jetson-nano-home-server" data-nav="blog">
-  <article class="article">
-    <a class="back" href="#blog">← All posts</a>
-    <p class="meta"><time datetime="2026-11-13">Nov 13, 2026</time> · Home lab</p>
-    <h1>How I Turned a Jetson Nano Into a Home Server</h1>
-    <p class="dek">A board the size of a coaster now blocks ads for my whole house, hosts my own private cloud, and lets me reach both from anywhere, on about 5 watts.</p>
-
-    <figure>
-      <img src="assets/images/blog/jetson-nano.jpg" alt="NVIDIA Jetson Nano Developer Kit with its black heatsink and row of USB ports" width="600" height="430">
-      <figcaption>NVIDIA Jetson Nano Developer Kit. Photo: <a href="https://commons.wikimedia.org/wiki/File:NVIDIA_Jetson_Nano_Developer_Kit_(47616885631)_(cropped).jpg" target="_blank" rel="noopener noreferrer">SparkFun Electronics</a>, CC BY 2.0.</figcaption>
-    </figure>
-
-    <h2>What it does</h2>
-    <ul class="does">
-      <li><img src="assets/images/logos/pihole.svg" alt="" width="28" height="28"><div><b>Blocks ads everywhere.</b> Pi-hole filters ads and trackers at the DNS level, so every device on the network is covered, including phones, smart TVs, and consoles, with nothing to install on them.</div></li>
-      <li><img src="assets/images/logos/nextcloud.svg" alt="" width="28" height="28"><div><b>Hosts my files.</b> Nextcloud gives me a private Google Drive with a web UI and desktop and mobile sync, backed by a 500GB SSD.</div></li>
-      <li><img src="assets/images/logos/tailscale.svg" alt="" width="28" height="28"><div><b>Works from anywhere.</b> Tailscale connects my devices over an encrypted WireGuard VPN, so all of it is reachable when I'm away from home.</div></li>
-    </ul>
-
-    <h2>The hardware</h2>
-    <table class="spec">
-      <tr><th>Board</th><td>NVIDIA Jetson Nano Developer Kit, 4GB</td></tr>
-      <tr><th>CPU</th><td>Quad-core ARM Cortex-A57 @ 1.43 GHz</td></tr>
-      <tr><th>GPU</th><td>128-core NVIDIA Maxwell</td></tr>
-      <tr><th>Memory</th><td>4GB 64-bit LPDDR4</td></tr>
-      <tr><th>Boot drive</th><td>16GB microSD</td></tr>
-      <tr><th>Storage</th><td>500GB USB SSD</td></tr>
-      <tr><th>Network</th><td>Gigabit Ethernet, wired for reliability</td></tr>
-      <tr><th>Power draw</th><td>~5W, running 24/7</td></tr>
-    </table>
-
-    <h2>How it fits together</h2>
-    <h3>Storage first</h3>
-    <p>The Nano boots from a 16GB microSD card, which fills up fast. A 500GB USB SSD holds everything else: Docker images, Pi-hole data, and Nextcloud files. It mounts automatically at boot, and the Nano still starts normally if the drive is ever unplugged.</p>
-
-    <h3>Docker for the services</h3>
-    <p>Pi-hole and Nextcloud each run in their own container, with Docker's storage moved to the SSD. One Jetson-specific gotcha: the Nano's older 4.9 Linux kernel conflicts with Docker's default security (seccomp) profile, so containers need that profile relaxed to start.</p>
-
-    <h3>Pi-hole</h3>
-    <p>Ubuntu's built-in DNS resolver already uses port 53, so it has to step aside before Pi-hole can take over. My ISP router doesn't allow custom DNS, so I point each device at the Nano directly and keep a public resolver as a fallback in case the Nano goes offline.</p>
-
-    <h3>Nextcloud</h3>
-    <p>Nextcloud replaced an older Samba share. I moved the existing files into it, let it index them, and checked a sample of documents and photos before retiring the old share.</p>
-
-    <h3>Tailscale</h3>
-    <p>Tailscale needs no port forwarding or router changes, which makes it ideal behind a locked-down ISP router. Magic DNS gives the Nano a readable hostname with real HTTPS certificates, so I never type an IP address. Connections are peer-to-peer, so speed is limited mainly by my home upload bandwidth. The free plan covers up to 100 devices.</p>
-
-    <h2>At a glance</h2>
-    <table class="spec">
-      <tr><th>Service</th><th>Role</th><th>Runs in</th></tr>
-      <tr><td>Pi-hole</td><td>Network-wide DNS ad blocker</td><td>Docker</td></tr>
-      <tr><td>Nextcloud</td><td>Private cloud storage and sync</td><td>Docker</td></tr>
-      <tr><td>Tailscale</td><td>WireGuard VPN with Magic DNS</td><td>Host</td></tr>
-    </table>
-
-    <h2>The verdict</h2>
-    <p>For about $100 (board plus SSD), I have a quiet, always-on server that blocks ads on every device, serves my files over HTTPS, and is reachable from anywhere, with no port forwarding and no dynamic DNS.</p>
-
-    <p class="note">Want the exact commands? The full step-by-step setup is in my <a href="https://github.com/dipinknair/what-i-use/blob/main/blogs/jetson-nano-homeserver.md" target="_blank" rel="noopener noreferrer">what-i-use</a> repository.</p>
-  </article>
-</main>
-
 <!-- CONTACT -->
 <main class="view" id="v-contact">
   <div class="hero">
@@ -372,29 +223,7 @@ footer{border-top:2px solid var(--line);padding:26px 0 40px;text-align:right;fon
 </div>
 <script>
 (function(){
-  document.getElementById('year').textContent=new Date().getFullYear();
-  var themeToggle=document.getElementById('themeToggle');
-  var moonIcon=document.getElementById('moonIcon');
-  var sunIcon=document.getElementById('sunIcon');
-  var prefersDark=window.matchMedia('(prefers-color-scheme: dark)');
-  function updateThemeToggle(){
-    var isDark=document.documentElement.dataset.theme
-      ? document.documentElement.dataset.theme==='dark'
-      : prefersDark.matches;
-    moonIcon.toggleAttribute('hidden',isDark);
-    sunIcon.toggleAttribute('hidden',!isDark);
-    themeToggle.setAttribute('aria-label','Switch to '+(isDark?'light':'dark')+' theme');
-  }
-  themeToggle.addEventListener('click',function(){
-    var isDark=document.documentElement.dataset.theme
-      ? document.documentElement.dataset.theme==='dark'
-      : prefersDark.matches;
-    document.documentElement.dataset.theme=isDark?'light':'dark';
-    updateThemeToggle();
-  });
-  prefersDark.addEventListener('change',updateThemeToggle);
-  updateThemeToggle();
-  var views=['home','about','projects','blog','contact','jetson-nano-home-server','obsidian-git-sync'];
+  var views=['home','about','contact'];
   function show(){
     var h=(location.hash||'#home').slice(1);
     if(views.indexOf(h)<0)h='home';
@@ -408,67 +237,6 @@ footer{border-top:2px solid var(--line);padding:26px 0 40px;text-align:right;fon
   }
   window.addEventListener('hashchange',show);
   show();
-
-  // Site search: scans the text of each view (Home is skipped since it only repeats other pages).
-  var q=document.getElementById('q'),results=document.getElementById('results');
-  function textOf(el){
-    var w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT),parts=[],n;
-    while((n=w.nextNode()))parts.push(n.nodeValue);
-    return parts.join(' ').replace(/\s+([.,:;!?])/g,'$1').replace(/\s+/g,' ').trim();
-  }
-  var pages=views.filter(function(v){return v!=='home'}).map(function(v){
-    var el=document.getElementById('v-'+v),link=document.querySelector('#nav a[data-v="'+v+'"]');
-    return{id:v,title:link?link.textContent:el.querySelector('h1').textContent,text:textOf(el)};
-  });
-  function snippet(p,term){
-    var text=p.text,lower=text.toLowerCase(),ti=lower.indexOf(p.title.toLowerCase());
-    // Prefer a match after the page title so snippets don't just repeat it.
-    var i=lower.indexOf(term,ti<0?0:ti+p.title.length);if(i<0)i=lower.indexOf(term);
-    var start=Math.max(0,i-50),span=document.createElement('span');
-    span.append((start?'…':'')+text.slice(start,i));
-    var m=document.createElement('mark');m.textContent=text.substr(i,term.length);span.append(m);
-    span.append(text.slice(i+term.length,i+term.length+70)+'…');
-    return span;
-  }
-  function search(){
-    var terms=q.value.toLowerCase().split(/\s+/).filter(Boolean);
-    results.textContent='';
-    if(!terms.length){results.hidden=true;return}
-    var hits=pages.map(function(p){
-      var t=p.text.toLowerCase(),score=0;
-      for(var i=0;i<terms.length;i++){var n=t.split(terms[i]).length-1;if(!n)return null;score+=n}
-      return{page:p,score:score};
-    }).filter(Boolean).sort(function(a,b){return b.score-a.score}).slice(0,6);
-    hits.forEach(function(h){
-      var li=document.createElement('li'),a=document.createElement('a'),b=document.createElement('b');
-      a.href='#'+h.page.id;b.textContent=h.page.title;
-      a.append(b,snippet(h.page,terms[0]));li.append(a);results.append(li);
-    });
-    if(!hits.length){var li=document.createElement('li');li.className='none';li.textContent='No matches';results.append(li)}
-    results.hidden=false;
-  }
-  function closeSearch(){q.value='';results.hidden=true}
-  q.addEventListener('input',search);
-  q.addEventListener('keydown',function(e){
-    if(e.key==='Escape')closeSearch();
-    if(e.key==='Enter'){var first=results.querySelector('a');if(first){location.hash=first.getAttribute('href');closeSearch();q.blur()}}
-  });
-  results.addEventListener('click',function(e){if(e.target.closest('a'))closeSearch()});
-  document.addEventListener('click',function(e){if(!e.target.closest('.search'))results.hidden=true});
-
-  // Project filter chips
-  var chips=document.querySelectorAll('#projectChips .chip');
-  var cards=document.querySelectorAll('#projectGrid .card');
-  chips.forEach(function(chip){
-    chip.addEventListener('click',function(){
-      chips.forEach(function(c){c.classList.remove('on')});
-      chip.classList.add('on');
-      var f=chip.dataset.filter;
-      cards.forEach(function(card){
-        card.style.display=(f==='all'||card.dataset.cat===f)?'':'none';
-      });
-    });
-  });
 })();
 </script>
 </body>

@@ -1,14 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="refresh" content="0;url=../index.html#projects">
-    <title>Projects — Dipin Nair</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Selected software and open-source projects by Dipin Nair.">
+  <title>Projects — Dipin Nair</title>
+  <link rel="stylesheet" href="../assets/css/standalone.css">
+  <link rel="stylesheet" href="../assets/css/header.css">
+  <script src="../assets/js/search-index.js" defer></script>
+  <script src="../assets/js/site.js" defer></script>
 </head>
-
 <body>
-    <p>Redirecting to <a href="../index.html#projects">projects</a>…</p>
+<div class="wrap">
+  <header>
+    <a class="logo" href="../index.html">Dipin</a>
+    <nav id="nav" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#about">About</a>
+      <a href="index.html" aria-current="page">Projects</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../index.html#contact">Contact</a>
+      <div class="search">
+        <input id="q" type="search" placeholder="Search…" aria-label="Search the site" autocomplete="off">
+        <ul id="results" hidden></ul>
+      </div>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch theme">
+        <svg id="moonIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg id="sunIcon" hidden width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <span class="tag highlight">Projects</span>
+      <h1>Things I've <span>built.</span></h1>
+      <p class="lead">Selected projects and open-source work.</p>
+    </section>
+    <section aria-label="Project list">
+      <div class="chips" aria-label="Filter projects">
+        <button type="button" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-filter="pymechanical" aria-pressed="false">PyMechanical</button>
+        <button type="button" data-filter="ipsum" aria-pressed="false">Lorem ipsum</button>
+      </div>
+      <div class="grid" id="projectGrid">
+        <article class="card" data-cat="pymechanical">
+          <div class="thumb" style="--tile:#f2c94c">PyMechanical</div>
+          <div class="body"><span class="meta">Open source</span><h2>PyMechanical</h2><p>PyAnsys open-source Python library enabling programmatic access to Ansys Mechanical for simulation workflows.</p><div class="tags"><span class="tag">Python</span><span class="tag">gRPC</span><span class="tag">Docker</span></div></div>
+        </article>
+        <article class="card" data-cat="ipsum">
+          <div class="thumb" style="--tile:#f4a98a">Lorem ipsum</div>
+          <div class="body"><span class="meta">Lorem ipsum</span><h2>Lorem ipsum</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><div class="tags"><span class="tag">Lorem ipsum</span></div></div>
+        </article>
+        <article class="card" data-cat="ipsum">
+          <div class="thumb" style="--tile:#b9d8c2">Lorem ipsum</div>
+          <div class="body"><span class="meta">Lorem ipsum</span><h2>Lorem ipsum</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><div class="tags"><span class="tag">Lorem ipsum</span></div></div>
+        </article>
+        <article class="card" data-cat="ipsum">
+          <div class="thumb" style="--tile:#c9d4f0">Lorem ipsum</div>
+          <div class="body"><span class="meta">Lorem ipsum</span><h2>Lorem ipsum</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><div class="tags"><span class="tag">Lorem ipsum</span></div></div>
+        </article>
+        <article class="card" data-cat="ipsum">
+          <div class="thumb" style="--tile:#f2c94c">Lorem ipsum</div>
+          <div class="body"><span class="meta">Lorem ipsum</span><h2>Lorem ipsum</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><div class="tags"><span class="tag">Lorem ipsum</span></div></div>
+        </article>
+        <article class="card" data-cat="ipsum">
+          <div class="thumb" style="--tile:#f4a98a">Lorem ipsum</div>
+          <div class="body"><span class="meta">Lorem ipsum</span><h2>Lorem ipsum</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><div class="tags"><span class="tag">Lorem ipsum</span></div></div>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer>Copyright © <span id="year"></span> Dipin. All rights reserved.</footer>
+</div>
+<script>
+  const filters = document.querySelectorAll('[data-filter]');
+  const cards = document.querySelectorAll('#projectGrid [data-cat]');
+  filters.forEach((filter) => {
+    filter.addEventListener('click', () => {
+      const selected = filter.dataset.filter;
+      filters.forEach((item) => item.setAttribute('aria-pressed', String(item === filter)));
+      cards.forEach((card) => {
+        card.hidden = selected !== 'all' && card.dataset.cat !== selected;
+      });
+    });
+  });
+</script>
 </body>
-
 </html>
