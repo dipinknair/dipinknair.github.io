@@ -48,10 +48,10 @@ def build_index():
         (Path("projects") / "index.html", None, "Projects", "projects/index.html"),
         (Path("blog") / "index.html", None, "Blog", "blog/index.html"),
     ]
-    for path in sorted((ROOT / "blog").glob("*.html")):
-        if path.name != "index.html":
-            url = f"blog/{path.name}"
-            sources.append((path, None, None, url))
+    for folder in ("projects", "blog"):
+        for path in sorted((ROOT / folder).glob("*.html")):
+            if path.name != "index.html":
+                sources.append((path, None, None, f"{folder}/{path.name}"))
     pages = []
     for filename, section, title, url in sources:
         document = PageText(

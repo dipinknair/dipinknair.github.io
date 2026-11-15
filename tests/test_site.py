@@ -7,7 +7,8 @@ from urllib.parse import urlsplit
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PAGES = [ROOT / "index.html", ROOT / "projects" / "index.html"]
+PAGES = [ROOT / "index.html"]
+PAGES.extend(sorted((ROOT / "projects").glob("*.html")))
 PAGES.extend(sorted((ROOT / "blog").glob("*.html")))
 
 
@@ -89,6 +90,8 @@ class SearchIndexTests(unittest.TestCase):
         for term, url in [
             ("seccomp", "blog/jetson-nano-home-server.html"),
             ("fine-grained", "blog/obsidian-git-sync.html"),
+            ("slic", "projects/strokemap.html"),
+            ("workbench", "projects/bookmarklab.html"),
         ]:
             with self.subTest(term=term):
                 matches = [page["url"] for page in pages if term in page["text"].lower()]
