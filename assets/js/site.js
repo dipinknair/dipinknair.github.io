@@ -5,7 +5,6 @@
   var themeToggle = document.getElementById('themeToggle');
   var moonIcon = document.getElementById('moonIcon');
   var sunIcon = document.getElementById('sunIcon');
-  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
   try {
     var savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'light' || savedTheme === 'dark') {
@@ -15,9 +14,9 @@
     console.warn('Unable to read the saved theme.', error);
   }
 
+  // Light is the default; dark applies only when the visitor picks it.
   function isDark() {
-    var theme = document.documentElement.dataset.theme;
-    return theme ? theme === 'dark' : prefersDark.matches;
+    return document.documentElement.dataset.theme === 'dark';
   }
   function updateThemeToggle() {
     moonIcon.toggleAttribute('hidden', isDark());
@@ -34,7 +33,6 @@
     }
     updateThemeToggle();
   });
-  prefersDark.addEventListener('change', updateThemeToggle);
   updateThemeToggle();
 
   var q = document.getElementById('q');

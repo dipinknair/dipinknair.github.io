@@ -9,19 +9,6 @@
   --line: #1d1a14;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-    --bg: #0f0d0a;
-    --card: #1a1815;
-    --ink: #f5efe0;
-    --mute: #b8aea0;
-    --accent: #ff8844;
-    --highlight: #6d5d1a;
-    --line: #e8dcc8;
-  }
-}
-
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.65 Georgia, "Times New Roman", serif; }
 a { color: inherit; }
