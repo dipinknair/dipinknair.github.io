@@ -7,7 +7,7 @@ window.siteSearchPages = [
   {
     "url": "index.html#contact",
     "title": "Contact",
-    "text": "Contact Let's connect. Open to interesting problems in simulation, Python tooling and open source. Email dipinknair619@gmail.com Code GitHub \u2192 Network LinkedIn \u2192 Resume Download PDF \u2192 Based in Austin, TX."
+    "text": "Contact Let's connect. Open to interesting problems in simulation, Python tooling and open source. Email dipinknair619@gmail.com Code GitHub \u2192 Network LinkedIn \u2192 Resume Download PDF \u2192"
   },
   {
     "url": "projects/index.html",
