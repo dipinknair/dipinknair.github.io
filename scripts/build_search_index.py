@@ -43,8 +43,8 @@ class PageText(HTMLParser):
 
 def build_index():
     sources = [
-        ("index.html", "v-about", "About", "index.html#about"),
-        ("index.html", "v-contact", "Contact", "index.html#contact"),
+        ("about/index.html", None, "About", "about/index.html"),
+        ("contact/index.html", None, "Contact", "contact/index.html"),
         (Path("projects") / "index.html", None, "Projects", "projects/index.html"),
         (Path("blog") / "index.html", None, "Blog", "blog/index.html"),
     ]

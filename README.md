@@ -1,7 +1,7 @@
 # Portfolio Website.
 Welcome to my web portfolio. Click [here](https://dipinknair.github.io)
 
-The homepage lives in `index.html`; blog posts are in `blog/`, and project listings are in `projects/`.
+The homepage lives in `index.html`; `about/`, `contact/`, `blog/`, and `projects/` each hold their own pages.
 
 Every page includes the full navigation, theme toggle, and site-wide full-text search.
 After editing page content or adding a blog post, rebuild the committed search index:

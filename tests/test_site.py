@@ -7,7 +7,7 @@ from urllib.parse import urlsplit
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PAGES = [ROOT / "index.html"]
+PAGES = [ROOT / "index.html", ROOT / "about" / "index.html", ROOT / "contact" / "index.html"]
 PAGES.extend(sorted((ROOT / "projects").glob("*.html")))
 PAGES.extend(sorted((ROOT / "blog").glob("*.html")))
 
